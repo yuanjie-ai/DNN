@@ -1,5 +1,7 @@
 # DeepLearning
 - keras
-- tflearn
-- tensorflow
+
+- Tensorflow
+  - tflearn
+  - tfDeploy
 
