@@ -14,8 +14,8 @@
 
 ---
 ## 工具
-### [spaCy][6]
-
+### [spaCy][61]
+### [easyEmbed][62]
 
 
 
@@ -26,4 +26,5 @@
 [4]: http://www.jianshu.com/p/b7ede4e842f1
 [41]: https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md
 
-[6]: https://github.com/explosion/spaCy
+[61]: https://github.com/explosion/spaCy
+[62]: https://github.com/yanaiela/easyEmbed
