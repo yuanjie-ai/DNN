@@ -18,7 +18,7 @@
 ### [spaCy][61]
 ### [easyEmbed][62]
 ### [ShallowLearn][63]
-
+### [ngram2vec][64]
 
 ---
 [1]: x
@@ -30,3 +30,4 @@
 [61]: https://github.com/explosion/spaCy
 [62]: https://github.com/yanaiela/easyEmbed
 [63]: https://github.com/giacbrd/ShallowLearn
+[64]: https://github.com/zhezhaoa/ngram2vec
