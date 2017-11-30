@@ -11,7 +11,8 @@
 
 ## [fastText][4]
 - [Pre-trained word vectors][41]
-
+- https://github.com/facebookresearch/fastText
+- https://github.com/salestock/fastText.py
 ---
 ## 工具
 ### [spaCy][61]
