@@ -16,7 +16,7 @@
 ## 工具
 ### [spaCy][61]
 ### [easyEmbed][62]
-
+### [ShallowLearn][63]
 
 
 ---
@@ -28,3 +28,4 @@
 
 [61]: https://github.com/explosion/spaCy
 [62]: https://github.com/yanaiela/easyEmbed
+[63]: https://github.com/giacbrd/ShallowLearn
