@@ -20,7 +20,7 @@
 ### [ShallowLearn][63]
 ### [ngram2vec][64]
 ### [glove-python][65]: http://www.foldl.me/2014/glove-python/
-### [flashtext][66]: http://dwz.cn/6YUkG7
+### [flashtext][66]: 比正则快http://dwz.cn/6YUkG7
 ---
 [1]: x
 [2]: http://blog.csdn.net/sinat_26917383/article/details/54847240
