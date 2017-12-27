@@ -5,7 +5,9 @@
 - keras
 - Tensorflow
   - tflearn
-  - tfDeploy
+  - tfDeploy
+- PyTorch
+    - skorch
   
 # 图像
 - [PyVips][1]
