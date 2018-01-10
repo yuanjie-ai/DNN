@@ -1,7 +1,16 @@
 <h1 align = "center">:rocket: 自然语言处理 :facepunch:</h1>
 
 ---
+## 1. 分词
+> 最大匹配/最少词数/概率最大
 
+- 交集型歧义
+- 组合型歧义
+- 
+
+
+
+---
 ## [Word2Vec][1]
 - Skip-Gram: 从一个文字来预测上下文
 - Bag-of-Words(CBOW): 从上下文来预测一个文字
