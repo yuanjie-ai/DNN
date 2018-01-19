@@ -1,1 +1,11 @@
-
+## 特征工程
+- 根据Tfidf/词频OneHot
+- total_length
+- num_words
+- num_unique_words
+- words_vs_unique: num_unique_words/num_words
+- num_exclamation_marks: 感叹号
+- num_question_marks: 问号
+- num_punctuation: 标点
+- num_symbols
+- num_smilies
