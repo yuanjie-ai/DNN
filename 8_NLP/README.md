@@ -45,6 +45,8 @@
 ### [ngram2vec][64]
 ### [glove-python][65]: http://www.foldl.me/2014/glove-python/
 ### [flashtext][66]: 比正则快http://dwz.cn/6YUkG7
+### [Synonyms][67]
+
 ---
 [1]: x
 [2]: http://blog.csdn.net/sinat_26917383/article/details/54847240
@@ -60,3 +62,4 @@
 [64]: https://github.com/zhezhaoa/ngram2vec
 [65]: https://github.com/maciejkula/glove-python
 [66]: https://github.com/vi3k6i5/flashtext
+[67]: https://github.com/huyingxi/Synonyms
