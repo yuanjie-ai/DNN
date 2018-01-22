@@ -8,7 +8,8 @@
   - tfDeploy
 - PyTorch
     - skorch
-  
+- [节省内存][2]
+
 # 图像
 - [PyVips][1]
 
@@ -21,3 +22,4 @@
 
 ---
 [1]: https://github.com/jcupitt/pyvips
+[2]: https://github.com/openai/gradient-checkpointing
