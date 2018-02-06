@@ -3,6 +3,7 @@
 ---
 # 工具
 - Keras
+  - keras-importance-sampling
 - Tensorflow
   - tflearn
   - tfDeploy
