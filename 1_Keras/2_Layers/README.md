@@ -5,7 +5,6 @@ http://blog.csdn.net/xiaozhuge080/article/details/52678453
 http://blog.csdn.net/pengjian444/article/details/56316445
 ---
 ## 1. 常用层：`keras.layers.core`
-
 - Dense层：全连接层
 - Activation层：对一个层的输出添加激活函数
 - Dropout层：每次更新参数的时候随机断开一定百分比(b)的输入神经元连接，用于防止过拟合
@@ -19,3 +18,20 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - Masking层：使用给定的值对输入的序列信号进行“屏蔽”，用以定位需要跳过的时间步。
 - Highway层：Highway层建立全连接的Highway网络，这是LSTM在前馈神经网络中的推广
 - MaxoutDense层：参数尚不理解，具体参考文献和文档。
+
+---
+## 2. Convolution层
+- Convolution2D层：二维卷积层对二维输入进行滑动窗卷积
+- AtrousConvolution2D层：该层对二维输入进行Atrous卷积，也即膨胀卷积或带孔洞的卷积。
+    - Convolution1D, AtrousConvolution1D，Convolution3D同
+- SeparableConvolution2D层：该层是对2D输入的可分离卷积。可分离卷积首先按深度方向进行卷积（对每个输入通道分别卷积），然后逐点进行卷积，将上一步的卷积结果混合到输出通道中。
+- Deconvolution2D层：该层是卷积操作的转置（反卷积）。需要反卷积的情况通常发生在用户想要对一个普通卷积的结果做反方向的变换。例如，将具有该卷积层输出shape的tensor转换为具有该卷积层输入shape的tensor。
+- Cropping1D层：在时间轴（axis1）上对1D输入（即时间序列）进行裁剪
+- Cropping2D层：对2D输入（图像）进行裁剪，将在空域维度，即宽和高的方向上裁剪
+- Cropping3D层：对2D输入（图像）进行裁剪
+- UpSampling1/2/3D层：不明所以
+- ZeroPadding1D层：对1D输入的首尾端（如时域序列）填充0，以控制卷积以后向量的长度
+- ZeroPadding2D层：对2D输入（如图片）的边界填充0，以控制卷积以后特征图的大小
+- ZeroPadding3D层：将数据的三个维度上填充0
+
+---
