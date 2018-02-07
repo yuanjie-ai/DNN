@@ -58,17 +58,24 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - Embedding层：嵌入层将正整数（下标）转换为具有固定大小的向量，如[[4],[20]]->[[0.25,0.1],[0.6,-0.2]]，Embedding层只能作为模型的第一层
 
 ## 7. Advanced Activation
-- LeakyReLU层：LeakyRelU是修正线性单元（Rectified Linear - Unit，ReLU）的特殊版本，当不激活时，LeakyReLU仍然会有非零输出值，从而获得一个小梯度，避免ReLU- 可能出现的神经元“死亡”现象。
+- LeakyReLU层：LeakyRelU是修正线性单元（Rectified Linear - Unit，ReLU）的特殊版本，当不激活时，LeakyReLU仍然会有非零输出值，从而获得一个小梯度，避免ReLU可能出现的神经元“死亡”现象。
 - PReLU层：该层为参数化的ReLU（Parametric ReLU）
 - ELU层：ELU层是指数线性单元（Exponential Linera Unit）
 - ParametricSoftplus层：该层是参数化的Softplus
 - ThresholdedReLU层：该层是带有门限的ReLU
 - SReLU层：该层是S形的ReLU
 
+---
+## 8. BatchNormalization
+- BatchNormalization层：该层在每个batch上将前一层的激活值重新规范化，即使得其输出数据的均值接近0，其标准差接近1，具体请参考BN算法。
 
+## 9. Noise
+- GaussianNoise层：为层的输入施加0均值，标准差为sigma的加性高斯噪声。
+- GaussianDropout层：为层的输入施加以1为均值，标准差为sqrt(p/(1-p)的乘性高斯噪声
 
-
-
+## 10. Wrapper
+- TimeDistributed包装器：该包装器可以把一个层应用到输入的每一个时间步上
+- Bidirectional包装器：双向RNN包装器
 
 ---
 [1]: http://deeplearning.net/tutorial/lstm.html
