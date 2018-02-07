@@ -1,6 +1,8 @@
 <h1 align = "center">:rocket: 网络层 :facepunch:</h1>
 
 ---
+http://blog.csdn.net/xiaozhuge080/article/details/52678453
+---
 ## 常用层：`keras.layers.core`
 
 ### 1. Dense层：全连接层
