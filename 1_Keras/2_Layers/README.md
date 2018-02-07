@@ -54,7 +54,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - LSTM层：Keras长短期记忆模型，关于此算法的详情，请参考[本教程][1]
 
 ---
-## 6. Embedding
+## [6. Embedding][2]
 - Embedding层：嵌入层将正整数（下标）转换为具有固定大小的向量，如[[4],[20]]->[[0.25,0.1],[0.6,-0.2]]，Embedding层只能作为模型的第一层
 
 ## 7. Advanced Activation
@@ -79,6 +79,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 
 ---
 [1]: http://deeplearning.net/tutorial/lstm.html
+[2]: https://github.com/Jie-Yuan/AI/blob/master/1_Keras/2_Layers/Embedding%E5%B1%82.md
 
 
 
