@@ -20,7 +20,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - MaxoutDense层：参数尚不理解，具体参考文献和文档。
 
 ---
-## 2. Convolution层
+## 2. Convolution
 - Convolution2D层：二维卷积层对二维输入进行滑动窗卷积
 - AtrousConvolution2D层：该层对二维输入进行Atrous卷积，也即膨胀卷积或带孔洞的卷积。
     - Convolution1D, AtrousConvolution1D，Convolution3D同
@@ -35,3 +35,40 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - ZeroPadding3D层：将数据的三个维度上填充0
 
 ---
+## 3. Pooling
+- MaxPooling1D层：对时域1D信号进行最大值池化
+- MaxPooling2D层：为空域信号施加最大值池化
+- MaxPooling3D层：为3D信号（空域或时空域）施加最大值池化
+- AveragePooling1/2/3D层
+- GlobalMaxPooling1/2D层
+- GlobalAveragePooling1/2D层
+
+---
+## 4. LocallyConnceted
+- LocallyConnected1/2D层：和 Convolution1/2D工作方式类似，唯一不同的是不进行权值共享。
+
+## 5. Recurrent
+- Recurrent层：这是递归层的抽象类，不能实例化，请使用它的子类：LSTM/SimpleRNN
+- SimpleRNN层：全连接RNN网络，RNN的输出会被回馈到输入
+- GRU层：门限递归单元（详见参考文献）
+- LSTM层：Keras长短期记忆模型，关于此算法的详情，请参考[本教程][1]
+
+
+
+
+
+
+
+
+---
+[1]: http://deeplearning.net/tutorial/lstm.html
+
+
+
+
+
+
+
+
+
+
