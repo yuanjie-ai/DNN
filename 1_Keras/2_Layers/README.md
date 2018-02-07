@@ -20,7 +20,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - MaxoutDense层：参数尚不理解，具体参考文献和文档。
 
 ---
-## 2. Convolution
+## 2. Convolution: `keras.layers.convolutional`
 - Convolution2D层：二维卷积层对二维输入进行滑动窗卷积
 - AtrousConvolution2D层：该层对二维输入进行Atrous卷积，也即膨胀卷积或带孔洞的卷积。
     - Convolution1D, AtrousConvolution1D，Convolution3D同
@@ -34,8 +34,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - ZeroPadding2D层：对2D输入（如图片）的边界填充0，以控制卷积以后特征图的大小
 - ZeroPadding3D层：将数据的三个维度上填充0
 
----
-## 3. Pooling
+## 3. Pooling: `keras.layers.convolutional`
 - MaxPooling1D层：对时域1D信号进行最大值池化
 - MaxPooling2D层：为空域信号施加最大值池化
 - MaxPooling3D层：为3D信号（空域或时空域）施加最大值池化
