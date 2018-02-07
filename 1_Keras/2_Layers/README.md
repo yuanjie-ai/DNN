@@ -65,7 +65,7 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - SReLU层：该层是S形的ReLU
 
 ---
-## 8. BatchNormalization
+## 8. BatchNormalization规范层: `keras.layers.normalization`
 - BatchNormalization层：该层在每个batch上将前一层的激活值重新规范化，即使得其输出数据的均值接近0，其标准差接近1，具体请参考BN算法。
 
 ## 9. Noise
