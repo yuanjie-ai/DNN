@@ -53,7 +53,17 @@ http://blog.csdn.net/pengjian444/article/details/56316445
 - GRU层：门限递归单元（详见参考文献）
 - LSTM层：Keras长短期记忆模型，关于此算法的详情，请参考[本教程][1]
 
+---
+## 6. Embedding
+- Embedding层：嵌入层将正整数（下标）转换为具有固定大小的向量，如[[4],[20]]->[[0.25,0.1],[0.6,-0.2]]，Embedding层只能作为模型的第一层
 
+## 7. Advanced Activation
+- LeakyReLU层：LeakyRelU是修正线性单元（Rectified Linear - Unit，ReLU）的特殊版本，当不激活时，LeakyReLU仍然会有非零输出值，从而获得一个小梯度，避免ReLU- 可能出现的神经元“死亡”现象。
+- PReLU层：该层为参数化的ReLU（Parametric ReLU）
+- ELU层：ELU层是指数线性单元（Exponential Linera Unit）
+- ParametricSoftplus层：该层是参数化的Softplus
+- ThresholdedReLU层：该层是带有门限的ReLU
+- SReLU层：该层是S形的ReLU
 
 
 
