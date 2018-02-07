@@ -2,6 +2,7 @@
 
 ---
 http://blog.csdn.net/xiaozhuge080/article/details/52678453
+http://blog.csdn.net/pengjian444/article/details/56316445
 ---
 ## 1. 常用层：`keras.layers.core`
 
