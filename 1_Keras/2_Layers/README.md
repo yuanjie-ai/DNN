@@ -3,7 +3,7 @@
 ---
 http://blog.csdn.net/xiaozhuge080/article/details/52678453
 ---
-## 常用层：`keras.layers.core`
+## 1. 常用层：`keras.layers.core`
 
 - Dense层：全连接层
 - Activation层：对一个层的输出添加激活函数
