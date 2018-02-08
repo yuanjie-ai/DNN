@@ -19,7 +19,8 @@
 - autograd
 - tangent
 
-
+# NLP
+语料https://github.com/Kyubyong/wordvectors
 
 ---
 [1]: https://github.com/jcupitt/pyvips
