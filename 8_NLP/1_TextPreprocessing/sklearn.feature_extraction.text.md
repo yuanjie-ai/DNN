@@ -1,4 +1,7 @@
 ```python
+import jieba
+from snownlp import SnowNLP
+
 s = "江州市长江大桥参加了长江大桥的通车仪式"
 text = Text.get_text_tokens(s, stop_words_path='./stop_words.txt') # 已去除停顿词
 stop_words = Text.get_stop_words('./stop_words.txt')
