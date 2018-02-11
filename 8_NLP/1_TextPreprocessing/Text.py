@@ -1,5 +1,9 @@
+# coding: utf-8
+
 import jieba
 from snownlp import SnowNLP
+
+
 class Text(object):
     def __init__(self):
         pass
@@ -13,7 +17,7 @@ class Text(object):
             if word not in stop_words:
                 if word != '\t':
                     word_list.append(word)
-        return word_list # 词频Counter(word_list)
+        return word_list  # 词频Counter(word_list)
 
     @staticmethod
     def get_stop_words(path):
