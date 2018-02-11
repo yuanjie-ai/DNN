@@ -46,6 +46,14 @@
 ### [glove-python][65]: http://www.foldl.me/2014/glove-python/
 ### [flashtext][66]: 比正则快http://dwz.cn/6YUkG7
 ### [Synonyms][67]
+### Pinyin2Hanzi: 拼音转汉字
+### snownlp: 情感分析
+### jieba: 分词
+### TextGrocery: 文本分类
+### [preprocessing][68]: 字符串预处理
+
+
+
 
 ---
 [1]: x
@@ -63,3 +71,4 @@
 [65]: https://github.com/maciejkula/glove-python
 [66]: https://github.com/vi3k6i5/flashtext
 [67]: https://github.com/huyingxi/Synonyms
+[68]: https://github.com/SpotlightData/preprocessing
