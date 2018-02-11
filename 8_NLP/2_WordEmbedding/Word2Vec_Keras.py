@@ -1,6 +1,7 @@
 #! -*- coding:utf-8 -*-
 #Keras版的Word2Vec，作者：苏剑林，http://kexue.fm
 #Keras 2.0.6 ＋ Tensorflow 测试通过
+# https://github.com/bojone/tf_word2vec
 
 import numpy as np
 from keras.layers import Input,Embedding,Lambda
