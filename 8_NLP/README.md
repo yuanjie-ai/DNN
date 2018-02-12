@@ -1,6 +1,7 @@
 <h1 align = "center">:rocket: 自然语言处理 :facepunch:</h1>
 
 ---
+http://ai.baidu.com/tech/nlp
 ## 1. 分词
 > 最大匹配/最少词数/概率最大/统计语言模型
 - 歧义
