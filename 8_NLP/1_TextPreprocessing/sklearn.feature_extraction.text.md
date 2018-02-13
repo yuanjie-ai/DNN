@@ -23,7 +23,7 @@ countVector.get_feature_names()
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 tfidfVector = TfidfVectorizer()
-tfidfVector.fit_transform(text).todense()
+tfidfVector.fit_transform(corpus).todense()
 tfidfVector.get_feature_names()
 
 # matrix([[0.44943642, 0.        , 0.6316672 , 0.6316672 ],
