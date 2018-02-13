@@ -1,3 +1,6 @@
+两个小例子带你词嵌入层学习入门——Keras版
+
+https://yq.aliyun.com/articles/221681
 
 https://github.com/yanaiela/easyEmbed
 
