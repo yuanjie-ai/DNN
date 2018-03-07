@@ -12,7 +12,14 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
   - tflearn
   - tfDeploy
 - PyTorch
-    - skorch
+    - [pytorch-tutorial][6]
+    - [DeepNLP-models-Pytorch][5]
+    - [skorch][3]
+    - [allennlp][4]
+    - [torchnet][7]
+    - [examples][8]
+    - [fastai][9]
+    
 - [节省内存][2]
 
 # 图像
@@ -29,3 +36,10 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 ---
 [1]: https://github.com/jcupitt/pyvips
 [2]: https://github.com/openai/gradient-checkpointing
+[3]: https://github.com/dnouri/skorch
+[4]: https://github.com/allenai/allennlp
+[5]: https://github.com/DSKSD/DeepNLP-models-Pytorch#references
+[6]: https://github.com/Jie-Yuan/pytorch-tutorial
+[7]: https://github.com/pytorch/tnt
+[8]: https://github.com/pytorch/examples
+[9]: https://github.com/fastai/fastai
