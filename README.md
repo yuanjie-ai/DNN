@@ -12,6 +12,7 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
   - tflearn
   - tfDeploy
 - PyTorch
+    - [pytorch-cifar][12]
     - [pytorch-tutorial][6]
     - [DeepNLP-models-Pytorch][5]
     - [skorch][3]
@@ -47,3 +48,4 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 [9]: https://github.com/fastai/fastai
 [10]: https://github.com/PetrochukM/PyTorch-NLP
 [11]: https://github.com/mrdrozdov-github/pytorch-extras
+[12]: https://github.com/kuangliu/pytorch-cifar
