@@ -16,6 +16,8 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
     - [DeepNLP-models-Pytorch][5]
     - [skorch][3]
     - [allennlp][4]
+    - [pytorch-nlp][10]
+    - [pytorch-extras][11]
     - [torchnet][7]
     - [examples][8]
     - [fastai][9]
@@ -43,3 +45,5 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 [7]: https://github.com/pytorch/tnt
 [8]: https://github.com/pytorch/examples
 [9]: https://github.com/fastai/fastai
+[10]: https://github.com/PetrochukM/PyTorch-NLP
+[11]: https://github.com/mrdrozdov-github/pytorch-extras
