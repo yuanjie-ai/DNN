@@ -9,7 +9,7 @@ https://mp.weixin.qq.com/s/lUP2BehOh7KczR3WRnOqFw
 https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 ---
 # Deploy
-- [lore][14]
+- [lore][14]: [Demo][15]
 
 ---
 # 工具
@@ -60,3 +60,4 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 [12]: https://github.com/kuangliu/pytorch-cifar
 [13]: https://github.com/GRAAL-Research/pytoune
 [14]: https://github.com/instacart/lore
+[15]: http://mp.weixin.qq.com/s/Rutl-aVbxTu39J0vWHbz-w
