@@ -14,7 +14,9 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 - Tensorflow
   - tflearn
   - tfDeploy
+
 - PyTorch
+    - [pytoune][13]
     - [pytorch-cifar][12]
     - [pytorch-tutorial][6]
     - [DeepNLP-models-Pytorch][5]
@@ -52,3 +54,4 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 [10]: https://github.com/PetrochukM/PyTorch-NLP
 [11]: https://github.com/mrdrozdov-github/pytorch-extras
 [12]: https://github.com/kuangliu/pytorch-cifar
+[13]: https://github.com/GRAAL-Research/pytoune
