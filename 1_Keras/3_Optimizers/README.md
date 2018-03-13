@@ -7,7 +7,6 @@
 - Adam
 - Adamax
 - Nadam
-- Optimizer
 - RMSprop
 - SGD
 - TFOptimizer
