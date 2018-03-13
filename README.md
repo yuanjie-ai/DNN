@@ -8,6 +8,10 @@ https://mp.weixin.qq.com/s/lUP2BehOh7KczR3WRnOqFw
 
 https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 ---
+# Deploy
+- [lore][14]
+
+---
 # 工具
 - Keras
   - keras-importance-sampling
@@ -55,3 +59,4 @@ https://www.leiphone.com/news/201801/pM48Ekleds2b6j5i.html
 [11]: https://github.com/mrdrozdov-github/pytorch-extras
 [12]: https://github.com/kuangliu/pytorch-cifar
 [13]: https://github.com/GRAAL-Research/pytoune
+[14]: https://github.com/instacart/lore
