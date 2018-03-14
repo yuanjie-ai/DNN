@@ -4,6 +4,9 @@
 http://ai.baidu.com/tech/nlp
 
 http://web.stanford.edu/class/cs224n/syllabus.html
+
+抽取三元组
+https://github.com/twjiang/fact_triple_extraction
 ## 1. 分词
 > 最大匹配/最少词数/概率最大/统计语言模型
 - 歧义
