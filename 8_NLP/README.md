@@ -50,7 +50,7 @@ http://web.stanford.edu/class/cs224n/syllabus.html
 ### [flashtext][66]: 比正则快http://dwz.cn/6YUkG7
 ### [Synonyms][67]
 ### Pinyin2Hanzi: 拼音转汉字
-### snownlp: 情感分析
+### [snownlp][5]: 情感分析
 ### jieba: 分词
 ### TextGrocery: 文本分类
 ### [preprocessing][68]: 字符串预处理
@@ -65,6 +65,7 @@ http://web.stanford.edu/class/cs224n/syllabus.html
 [21]: http://blog.csdn.net/xgf415/article/details/52662389
 
 [4]: http://www.jianshu.com/p/b7ede4e842f1
+[5]: https://github.com/isnowfy/snownlp
 [41]: https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md
 
 [61]: https://github.com/explosion/spaCy
