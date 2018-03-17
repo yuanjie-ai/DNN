@@ -57,6 +57,9 @@ https://github.com/twjiang/fact_triple_extraction
 ### jieba: 分词
 ### TextGrocery: 文本分类
 ### [preprocessing][68]: 字符串预处理
+### foolnltk
+### rake-nltk
+### textblob
 
 
 
