@@ -9,6 +9,8 @@
 - [搜狗语料][6]
 - [同义词表][7]
 
+http://blog.csdn.net/u012052268/article/details/78035272
+
 
 
 
