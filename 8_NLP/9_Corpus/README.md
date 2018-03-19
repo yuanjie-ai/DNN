@@ -7,7 +7,7 @@
 - [词向量][4]
 - [中文维基百科][5]: https://github.com/candlewill/Chinsese_word_vectors
 - [搜狗语料][6]
-
+- [同义词表][7]
 
 
 
@@ -20,3 +20,4 @@
 [4]: https://github.com/Kyubyong/wordvectors
 [5]: https://kexue.fm/archives/4176
 [6]: http://www.sogou.com/labs/resource/list_pingce.php
+[7]: https://kexue.fm/usr/uploads/2017/01/4014947738.7z
