@@ -6,9 +6,7 @@
 - [中文三元组][3]: 链接: https://pan.baidu.com/s/1mkcKP2C 密码: uajy
 - [词向量][4]
 - [中文维基百科][5]: https://github.com/candlewill/Chinsese_word_vectors
-```sh
-wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2
-```
+- [搜狗语料][6]
 
 
 
@@ -21,3 +19,4 @@ wget https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.
 [3]: https://spaces.ac.cn/archives/4359
 [4]: https://github.com/Kyubyong/wordvectors
 [5]: https://kexue.fm/archives/4176
+[6]: http://www.sogou.com/labs/resource/list_pingce.php
