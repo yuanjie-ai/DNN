@@ -1,5 +1,9 @@
 ## Install
 - [cmake][1]
+```sh
+tar zxvf cmake-3.6.0-Linux-x86 64.tar.gz 
+export PATH=$PATH:/home/bnu/cmake-3.6.0-Linux-x86 64/bin
+```
 - [opencc][2]：[下载rpm][3]
 ```sh
 tar -xzvf opencc-1.0.4.tar.gz
