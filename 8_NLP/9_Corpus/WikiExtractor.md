@@ -20,7 +20,7 @@ python setup.py install
 
 WikiExtractor.py -b 2G --processes 30 -o ./zhwiki ./zhwiki-latest-pages-articles.xml.bz2
 
-opencc -i wiki_00 -o zh_wiki_00 -c zht2zhs.ini
+opencc -i wiki_00 -o zh_wiki_00 -c zht2zhs.ini # zht2zhs.ini # Traditional to Simplified
 ```
 
 ---
