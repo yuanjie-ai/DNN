@@ -1,13 +1,12 @@
 ## Install
 - [cmake][1]
-- [opencc][2]
+- [opencc][2]：[下载rpm][3]
 ```sh
 tar -xzvf opencc-1.0.4.tar.gz
 cd opencc-1.0.4/
 make
 sudo make install
 ```
-或者[下载rpm][3]
 
 
 ```sh
