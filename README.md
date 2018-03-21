@@ -1,8 +1,7 @@
 <h1 align = "center">:rocket: DL :facepunch:</h1>
 
 ---
-
-https://0x9.me/VL3kf
+https://github.com/exacity/deeplearningbook-chinese
 
 https://mp.weixin.qq.com/s/lUP2BehOh7KczR3WRnOqFw
 
