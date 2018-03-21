@@ -14,7 +14,7 @@ http://blog.csdn.net/u012052268/article/details/78035272
 
 https://github.com/Roshanson/TextInfoExp
 
-https://github.com/ShelsonCao/cw2vec
+https://github.com/Luka0612/cw2vec
 
 
 
