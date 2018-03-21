@@ -29,4 +29,5 @@ https://github.com/klb3713/sentence2vec
 ## 预训练好的词向量
 https://github.com/3Top/word2vec-api
 
-https://drive.google.com/open?id=0B0ZXk88koS2KNER5UHNDY19pbzQ
+https://github.com/Kyubyong/wordvectors
+
