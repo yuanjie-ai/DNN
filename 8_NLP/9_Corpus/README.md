@@ -8,6 +8,7 @@
 - [中文维基百科][5]: https://github.com/candlewill/Chinsese_word_vectors
 - [搜狗语料][6]
 - [同义词表][7]
+https://github.com/dongxiexidian/Chinese
 
 http://blog.csdn.net/u012052268/article/details/78035272
 
