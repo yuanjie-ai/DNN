@@ -16,7 +16,7 @@ https://github.com/Roshanson/TextInfoExp
 
 https://github.com/Luka0612/cw2vec
 
-
+https://www.kaggle.com/facebook/fasttext-wikinews
 
 ---
 [1]: https://spaces.ac.cn/archives/4338
