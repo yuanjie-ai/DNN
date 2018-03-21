@@ -12,7 +12,9 @@ https://github.com/dongxiexidian/Chinese
 
 http://blog.csdn.net/u012052268/article/details/78035272
 
+https://github.com/Roshanson/TextInfoExp
 
+https://github.com/ShelsonCao/cw2vec
 
 
 
