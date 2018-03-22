@@ -18,6 +18,7 @@ https://github.com/Luka0612/cw2vec
 
 https://www.kaggle.com/facebook/fasttext-wikinews
 
+https://mp.weixin.qq.com/s/fSHhewYS0mlvlaRvez5KkA
 ---
 [1]: https://spaces.ac.cn/archives/4338
 [2]: https://spaces.ac.cn/archives/5067
