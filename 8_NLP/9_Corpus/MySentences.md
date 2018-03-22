@@ -1,6 +1,7 @@
 - LineSentence
 ```python
 from gensim.models.word2vec import LineSentence
+
 LineSentence('/DATA/1_DataCache/NLP/new_zhwiki/wiki_test.txt')
 ```
 
@@ -10,7 +11,6 @@ LineSentence('/DATA/1_DataCache/NLP/new_zhwiki/wiki_test.txt')
 ```python
 import logging
 from pathlib import Path
-
 from tqdm import tqdm
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
