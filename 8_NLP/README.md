@@ -7,6 +7,8 @@ http://web.stanford.edu/class/cs224n/syllabus.html
 
 抽取三元组
 https://github.com/twjiang/fact_triple_extraction
+
+https://mp.weixin.qq.com/s?__biz=MzU2NjAxNDYwMg==&mid=2247484322&idx=1&sn=3c7e70bd80ed74a3fa71438dc33656a1&chksm=fcb3a447cbc42d51e2d2849875b67cb946c36a32d566102f0bbf19477f3c22d30d3036d8cd1c&scene=0#rd
 ## 1. 分词
 > 最大匹配/最少词数/概率最大/统计语言模型
 - 歧义
