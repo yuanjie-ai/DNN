@@ -21,6 +21,7 @@ pattern_chinese = re.compile('[\u4e00-\u9fa5]+')
 
 ### 2. 清洗
 ```python
+import re
 from pipe import *
 
 def read(file):
