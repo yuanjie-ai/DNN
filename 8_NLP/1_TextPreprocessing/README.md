@@ -18,3 +18,25 @@ pattern_char = re.compile('[A-Za-z]+')
 pattern_chinese = re.compile('[\u4e00-\u9fa5]+')
 # pattern = re.compile('[^A-Za-z\u4e00-\u9fa5]+')
 ```
+
+### 2. 清洗
+```python
+from pipe import *
+
+def read(file):
+    with open(file) as f:
+        return f.read()
+
+def write(text, file, overwrite=True):
+    if overwrite:
+        with open(file, 'w') as f:
+            f.write(text)
+    else:
+        with open(file, 'a') as f:
+            f.write(text)
+            
+cut = Pipe(lambda x: jieba.lcut(x))
+sub = Pipe(lambda x: pattern.sub(' ', x))
+
+read(file_path).replace('\n', '').lower() | sub | cut | concat(' ')
+```
