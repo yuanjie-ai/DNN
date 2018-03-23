@@ -40,5 +40,5 @@ pattern = re.compile('[^0-9A-Za-z\u4e00-\u9fa5]+')
 cut = Pipe(lambda x: jieba.lcut(x))
 sub = Pipe(lambda x: pattern.sub(' ', x))
 
-read(file_path).replace('\n', '').lower() | sub | cut | concat(' ')
+text_clean = lambda file_path: read(file_path).replace('\n', '').lower() | sub | cut | concat(' ')
 ```
