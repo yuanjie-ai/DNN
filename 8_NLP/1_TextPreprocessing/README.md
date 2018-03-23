@@ -34,7 +34,8 @@ def write(text, file, overwrite=True):
     else:
         with open(file, 'a') as f:
             f.write(text)
-            
+
+pattern = re.compile('[^0-9A-Za-z\u4e00-\u9fa5]+')
 cut = Pipe(lambda x: jieba.lcut(x))
 sub = Pipe(lambda x: pattern.sub(' ', x))
 
