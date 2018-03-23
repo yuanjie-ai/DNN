@@ -22,6 +22,7 @@ pattern_chinese = re.compile('[\u4e00-\u9fa5]+')
 ### 2. 清洗
 ```python
 import re
+import jieba_fast as jieba
 from pipe import *
 
 def read(file):
