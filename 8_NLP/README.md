@@ -1,6 +1,8 @@
 <h1 align = "center">:rocket: 自然语言处理 :facepunch:</h1>
 
 ---
+https://github.com/crownpku/awesome-chinese-nlp
+
 http://ai.baidu.com/tech/nlp
 
 http://web.stanford.edu/class/cs224n/syllabus.html
