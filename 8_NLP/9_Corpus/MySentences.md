@@ -25,15 +25,13 @@ class MySentences(object):
             for file in files:
                 files.set_description("Processing '%s' " % file)
                 with open(file) as file:
-                    lines = tqdm(file)
+                    lines = tqdm(file, desc="Processing ")
                     for line in lines:
-                        lines.set_description("Processing ")
                         yield line.lower().split()
         else:
             with open(self.path) as file:
-                lines = tqdm(file)
+                lines = tqdm(file, desc="Processing ")
                 for line in lines:
-                    lines.set_description("Processing ")
                     # assume there's one document per line, tokens separated by whitespace
                     yield line.lower().split()
 ```
