@@ -42,4 +42,7 @@ cut = Pipe(lambda x: jieba.lcut(x))
 sub = Pipe(lambda x: pattern.sub(' ', x))
 
 text_clean = lambda file_path: read(file_path).replace('\n', '').lower() | sub | cut | concat(' ')
+
+file_path = '/DATA/1_DataCache/NLP/Corpus/new_zhwiki/test.txt'
+write(text_clean(file_path), '/DATA/1_DataCache/NLP/Corpus/new_zhwiki/wikiCleaned.txt')
 ```
