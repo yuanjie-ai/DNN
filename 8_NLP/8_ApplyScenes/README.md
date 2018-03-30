@@ -1,6 +1,6 @@
 
 ## [1. QA][1]
-[- ChatBot][2]
+- [ChatBot][2]
 
 
 
