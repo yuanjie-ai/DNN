@@ -31,3 +31,5 @@ https://github.com/3Top/word2vec-api
 
 https://github.com/Kyubyong/wordvectors
 
+https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md
+
