@@ -33,3 +33,5 @@ https://github.com/Kyubyong/wordvectors
 
 https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md
 
+https://github.com/facebookresearch/MUSE
+
