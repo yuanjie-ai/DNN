@@ -70,6 +70,7 @@ https://mp.weixin.qq.com/s?__biz=MzU2NjAxNDYwMg==&mid=2247484322&idx=1&sn=3c7e70
 ---
 ## 组织
 - THUNLP
+- FudanNLP
 
 
 ---
