@@ -29,6 +29,18 @@ def read(file):
     with open(file) as f:
         return f.read()
 
+from tqdm import tqdm
+class readIter(object):
+    def __init__(self, path):
+        self.path = path
+
+    def __iter__(self):
+        with open(self.path) as file:
+            lines = tqdm(file, desc="Processing ")
+            for line in lines:
+                # assume there's one document per line, tokens separated by whitespace
+                yield line.lower().split()
+
 def write(text, file, overwrite=True):
     if overwrite:
         with open(file, 'w') as f:
