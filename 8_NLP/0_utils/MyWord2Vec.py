@@ -25,7 +25,7 @@ class MyWord2Vec(object):
                  window=15,
                  min_count=1000,
                  workers=20,
-                 is_cbow=1,
+                 sg=0,
                  hs=0,
                  negative=5,
                  iter=10):
@@ -48,7 +48,7 @@ class MyWord2Vec(object):
         :param model_path:
         """
         model_train = lambda sentences: Word2Vec(sentences, size=size, window=window, min_count=min_count,
-                                                 workers=workers, sg=is_cbow, hs=hs, negative=negative, iter=iter)
+                                                 workers=workers, sg=sg, hs=hs, negative=negative, iter=iter)
         if isinstance(self.corpus, str) and Path(self.corpus).is_file():
             model = model_train(tqdm(LineSentence(self.corpus)))
         else:
