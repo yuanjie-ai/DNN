@@ -13,10 +13,11 @@ class MyNLP(object):
 
     def get_pure_corpus(self, sentence, returnstr=True):
         segment = jieba.cut(re.sub('[^0-9a-zA-Z\u4e00-\u9fa5]+', ' ', sentence.strip().lower()))
+        _filter = filter(lambda x: x not in self.stop_words, segment)
         if returnstr:
-            s = ' '.join(filter(lambda x: x not in self.stop_words, segment))
+            s = ' '.join(_filter)
         else:
-            s = list(filter(lambda x: x not in self.stop_words, segment))
+            s = list(filter(_filter))
         return s
 
     def get_key_words(self,
