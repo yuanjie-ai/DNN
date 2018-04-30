@@ -1,6 +1,8 @@
 <h1 align = "center">:rocket: DL :facepunch:</h1>
 
 ---
+cove
+
 https://github.com/fendouai/Awesome-TensorFlow-Chinese
 
 https://github.com/exacity/deeplearningbook-chinese
