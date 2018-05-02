@@ -1,5 +1,3 @@
-# coding=utf-8
-
 import datetime
 from pathlib import Path
 
@@ -10,7 +8,7 @@ from tqdm import *
 class MyDoc2Vec(Doc2Vec):
     def __init__(self, corpus, **kwargs):
         """
-        :param corpus: iterable 二维数组或者二维数组结构文件，最小单位word
+        :param corpus: ['Well done!', 'Good work']
         """
         self.corpus = corpus
         self.corpus_convert()
@@ -37,8 +35,6 @@ class MyDoc2Vec(Doc2Vec):
             If > 0, negative sampling will be used, the int for negative specifies how many "noise words"
                 should be drawn (usually between 5-20).
             If set to 0, no negative sampling is used.
-        :param iter:
-        :return:
         """
         model = Doc2Vec(documents=tqdm(self.corpus), vector_size=vector_size, window=window, min_count=min_count, dm=dm,
                         hs=hs, negative=negative, epochs=epochs, workers=32)
@@ -58,31 +54,31 @@ class MyDoc2Vec(Doc2Vec):
             model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
 
 # from pathlib import Path
-# 
+#
 # from gensim.models.doc2vec import Doc2Vec, TaggedDocument, TaggedLineDocument
 # from tqdm import *
-# 
-# 
+#
+#
 # class MyDoc2Vec(Doc2Vec):
 #     def __init__(self, corpus, **kwargs):
-# 
+#
 #         self.corpus(corpus)
 #         super().__init__(documents=self.corpus, **kwargs)  # documents=self.documents
-# 
+#
 #     def corpus(self, corpus):
 #         if isinstance(self.corpus, str) and Path(corpus).is_file():
 #             self.corpus = tqdm(TaggedLineDocument(corpus), desc='TaggedLineDocument')
 #         else:
 #             self.corpus = tqdm(self.CorpusIter(corpus), desc='TaggedDocument')
-# 
+#
 #     class CorpusIter(object):
 #         def __init__(self, corpus):
 #             self.corpus = corpus
-# 
+#
 #         def __iter__(self):
 #             for idx, line in enumerate(self.corpus):
 #                 yield TaggedDocument(line.split(), [idx])
-# 
+#
 #                 # @property
 #                 # def _corpus(self):
 #                 #     """
