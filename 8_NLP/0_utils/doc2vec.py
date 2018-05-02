@@ -8,7 +8,18 @@ from tqdm import *
 class MyDoc2Vec(Doc2Vec):
     def __init__(self, corpus, **kwargs):
         """
-        :param corpus: ['Well done!', 'Good work']
+        docs = ['Well done!',
+            'Good work',
+            'Great effort',
+            'nice work',
+            'Excellent!',
+            'Weak',
+            'Poor effort!',
+            'not good',
+            'poor work',
+            'Could have done better.']
+        model = MyDoc2Vec(docs)
+        model.doc2vec()  
         """
         self.corpus = corpus
         self.corpus_convert()
