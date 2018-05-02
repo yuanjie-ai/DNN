@@ -2,24 +2,24 @@ import datetime
 from pathlib import Path
 
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument, TaggedLineDocument
-from tqdm import *
+from tqdm import tqdm
 
 
 class MyDoc2Vec(Doc2Vec):
     def __init__(self, corpus, **kwargs):
         """
         docs = ['Well done!',
-            'Good work',
-            'Great effort',
-            'nice work',
-            'Excellent!',
-            'Weak',
-            'Poor effort!',
-            'not good',
-            'poor work',
-            'Could have done better.']
+                'Good work',
+                'Great effort',
+                'nice work',
+                'Excellent!',
+                'Weak',
+                'Poor effort!',
+                'not good',
+                'poor work',
+                'Could have done better.']
         model = MyDoc2Vec(docs)
-        model.doc2vec()  
+        model.doc2vec()
         """
         self.corpus = corpus
         self.corpus_convert()
