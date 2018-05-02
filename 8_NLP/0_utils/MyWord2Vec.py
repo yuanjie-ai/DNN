@@ -16,7 +16,7 @@ class MyWord2Vec(object):
 
     def __init__(self, corpus=None):
         """
-        :param corpus: iterable 二维
+        :param corpus: iterable 二维数组或者二维数组结构文件，最小单位word
         """
         self.corpus = corpus
 
