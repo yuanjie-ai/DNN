@@ -1,3 +1,6 @@
+# coding=utf-8
+
+
 import datetime
 from pathlib import Path
 
@@ -7,6 +10,9 @@ from tqdm import *
 
 class MyDoc2Vec(Doc2Vec):
     def __init__(self, corpus, **kwargs):
+        """
+        :param corpus: iterable 二维数组或者二维数组结构文件，最小单位word
+        """
         self.corpus = corpus
         self.corpus_convert()
 
@@ -35,7 +41,8 @@ class MyDoc2Vec(Doc2Vec):
         :param iter:
         :return:
         """
-        model = Doc2Vec(documents=tqdm(self.corpus), vector_size=vector_size, window=window, min_count=min_count, dm=dm, hs=hs, negative=negative, epochs=epochs, workers=32)
+        model = Doc2Vec(documents=tqdm(self.corpus), vector_size=vector_size, window=window, min_count=min_count, dm=dm,
+                        hs=hs, negative=negative, epochs=epochs, workers=32)
 
         return model
 
@@ -45,16 +52,11 @@ class MyDoc2Vec(Doc2Vec):
         else:
             self.corpus = [TaggedDocument(line.split(), [idx]) for idx, line in enumerate(self.corpus)]
 
-
     def model_save(self, model, path=None):
         if path:
             model.save(path)
         else:
             model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
-
-
-
-
 
 # from pathlib import Path
 # 
