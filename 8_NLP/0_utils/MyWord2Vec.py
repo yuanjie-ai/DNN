@@ -57,7 +57,7 @@ class MyWord2Vec(object):
         model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
 
         @staticmethod
-        def model(self, model_path):
+        def model(model_path):
             """
             load Word2Vec model
             """
