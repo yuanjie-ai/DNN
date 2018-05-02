@@ -56,22 +56,6 @@ class MyDoc2Vec(Doc2Vec):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # from pathlib import Path
 # 
 # from gensim.models.doc2vec import Doc2Vec, TaggedDocument, TaggedLineDocument
