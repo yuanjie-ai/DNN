@@ -55,6 +55,7 @@ class MyWord2Vec(object):
             model = model_train(self.corpus)
 
         model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
+        return model
 
         @staticmethod
         def model(model_path):
