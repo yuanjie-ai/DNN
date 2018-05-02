@@ -13,15 +13,14 @@ class MyDoc2Vec(Doc2Vec):
         self.corpus = corpus
         self.corpus_convert()
 
-    def doc2vec(
-            self,
-            vector_size=300,
-            window=10,
-            min_count=1,
-            dm=1,
-            hs=0,
-            negative=5,
-            epochs=10):
+    def doc2vec(self,
+                vector_size=300,
+                window=10,
+                min_count=1,
+                dm=1,
+                hs=0,
+                negative=5,
+                epochs=10):
         """
         :param size: Dimensionality of the feature vectors.
         :param window: The maximum distance between the current and predicted word within a sentence.
