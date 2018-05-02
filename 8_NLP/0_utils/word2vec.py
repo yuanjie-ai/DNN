@@ -16,7 +16,18 @@ class MyWord2Vec(object):
 
     def __init__(self, corpus=None):
         """
-        :param corpus: [['Well', 'done!'], ['Good', 'work']]
+        docs = [['Well', 'done!'],
+                ['Good', 'work'],
+                ['Great', 'effort'],
+                ['nice', 'work'],
+                ['Excellent!'],
+                ['Weak'],
+                ['Poor', 'effort!'],
+                ['not', 'good'],
+                ['poor', 'work'],
+                ['Could', 'have', 'done', 'better.']]
+        model = MyWord2Vec(docs)
+        model.word2vec()
         """
         self.corpus = corpus
         self.corpus_convert()
