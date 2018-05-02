@@ -1,3 +1,4 @@
+```python
 def word_bag(corpus):
     """
     二维
@@ -11,3 +12,4 @@ def word_bag(corpus):
 # dct.doc2idx
 # dct.id2token
 # dct.token2id
+```
