@@ -16,25 +16,23 @@ class MyWord2Vec(object):
 
     def __init__(self, corpus=None):
         """
-        :param corpus: iterable 二维数组或者二维数组结构文件，最小单位word
+        :param corpus: [['Well', 'done!'], ['Good', 'work']]
         """
         self.corpus = corpus
+        self.corpus_convert()
 
     def word2vec(self,
-                 size=300,
+                 vector_size=300,
                  window=15,
-                 min_count=1000,
-                 workers=20,
+                 min_count=1,
                  sg=0,
                  hs=0,
                  negative=5,
-                 iter=10):
+                 epochs=10):
         """
-        :param sentences: iterable 二维
-        :param size:  Dimensionality of the feature vectors.
+        :param vector_size:  Dimensionality of the feature vectors.
         :param window: The maximum distance between the current and predicted word within a sentence.
         :param min_count: Ignores all words with total frequency lower than this.
-        :param workers: njobs
         :param is_cbow: int {1, 0}
             Defines the training algorithm. If 1, CBOW is used, otherwise, skip-gram is employed.
         :param hs: int {1,0} shared_softmax
@@ -44,22 +42,17 @@ class MyWord2Vec(object):
             If > 0, negative sampling will be used, the int for negative specifies how many "noise words"
             should be drawn (usually between 5-20).
             If set to 0, no negative sampling is used.
-        :param iter:
-        :param model_path:
         """
-        model_train = lambda sentences: Word2Vec(sentences, size=size, window=window, min_count=min_count,
-                                                 workers=workers, sg=sg, hs=hs, negative=negative, iter=iter)
-        if isinstance(self.corpus, str) and Path(self.corpus).is_file():
-            model = model_train(tqdm(LineSentence(self.corpus)))
-        else:
-            model = model_train(self.corpus)
-
-        model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
+        model = Word2Vec(tqdm(self.corpus), size=vector_size, window=window, min_count=min_count, sg=sg, hs=hs,
+                         negative=negative, iter=epochs, workers=32)
         return model
 
-        @staticmethod
-        def model(model_path):
-            """
-            load Word2Vec model
-            """
-            return Word2Vec.load(model_path)
+    def corpus_convert(self):
+        if isinstance(self.corpus, str) and Path(self.corpus).is_file():
+            self.corpus = LineSentence(self.corpus)
+
+    def model_save(self, model, path=None):
+        if path:
+            model.save(path)
+        else:
+            model.save('./%s___%s.model' % (str(datetime.datetime.today())[:22], model.__str__()))
