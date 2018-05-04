@@ -62,5 +62,5 @@ class ModelUpdate(object):
             self.corpus = [TaggedDocument(line, [idx]) for idx, line in enumerate(self.corpus)]
 ```
 ---
-[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/0_utils/word2vec.py
-[2]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/0_utils/doc2vec.py
+[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/1_Word2Vec/myword2vec.md
+[2]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/6_Doc2Vec/mydoc2vec.md
