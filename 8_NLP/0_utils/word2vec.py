@@ -28,6 +28,8 @@ class MyWord2Vec(object):
                 ['Could', 'have', 'done', 'better.']]
         model = MyWord2Vec(docs)
         model.word2vec()
+        
+        model.init_sims(replace=True) # 对model进行锁定，并且据说是预载了相似度矩阵能够提高后面的查询速度，但是你的model从此以后就read only了
         """
         self.corpus = corpus
         self.corpus_convert()
