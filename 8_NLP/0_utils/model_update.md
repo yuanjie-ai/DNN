@@ -1,4 +1,7 @@
-- ModelUpdate
+# ModelUpdate
+- [Word2Vec][1]
+- [Doc2Vec][2]
+
 ```python
 from pathlib import Path
 
@@ -58,3 +61,6 @@ class ModelUpdate(object):
         else:
             self.corpus = [TaggedDocument(line, [idx]) for idx, line in enumerate(self.corpus)]
 ```
+---
+[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/0_utils/word2vec.py
+[2]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/0_utils/doc2vec.py
