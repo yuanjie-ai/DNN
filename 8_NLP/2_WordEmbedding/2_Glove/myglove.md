@@ -3,10 +3,23 @@ from pathlib import Path
 from glove import Corpus, Glove
 from tqdm import tqdm
 
+
 class MyGlove(object):
+    """
+    docs = [['Well', 'done!'],
+            ['Good', 'work'],
+            ['Great', 'effort'],
+            ['nice', 'work'],
+            ['Excellent!'],
+            ['Weak'],
+            ['Poor', 'effort!'],
+            ['not', 'good'],
+            ['poor', 'work'],
+            ['Could', 'have', 'done', 'better.']]
+    model = MyGlove(docs).glove()
+    """
 
     def __init__(self, corpus):
-
         self.corpus = corpus
         self.corpus_convert()
 
@@ -22,7 +35,7 @@ class MyGlove(object):
         corpus_model = Corpus()
         corpus_model.fit(tqdm(self.corpus, desc='Get Corpus'))
         self.corpus = corpus_model.matrix
-        print("Non-zero elements: %d" %self.corpus.nnz)
+        print("Non-zero elements: %d" % self.corpus.nnz)
         self.dictionary = corpus_model.dictionary
 
     def reader(self, file_path):
