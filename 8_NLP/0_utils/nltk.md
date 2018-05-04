@@ -1,3 +1,4 @@
+```python
 class NLTKTool(object):
 
     def __init__(self, corpus):
@@ -16,3 +17,4 @@ class NLTKTool(object):
         _getattr = lambda x: nltk.collocations.__getattribute__(x)
         _gram = _getattr('%sCollocationFinder' % ngram).from_words(self.corpus)
         return _gram.nbest(_getattr('%sAssocMeasures' % ngram).likelihood_ratio, n)
+```
