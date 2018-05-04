@@ -1,3 +1,4 @@
+- [Sklearn LDA][1]
 ```python
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import CountVectorizer
@@ -26,5 +27,12 @@ class MyLDA(object):
         for _, topic in tqdm(enumerate(model.components_)):
             l.append([feature_names[i] for i in topic.argsort()[:-(topN + 1):-1]])
         return l
-
 ```
+
+- Gensim LDA
+```python
+```
+
+
+---
+[1]: https://blog.csdn.net/tiffanyrabbit/article/details/76445909
