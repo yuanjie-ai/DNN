@@ -16,8 +16,8 @@ class MyLDA(object):
 
     def lda(self, n_components):
         tf_model = CountVectorizer()
-        tf_vec = tf_model.fit_transform(self.corpus)
-        lda = LatentDirichletAllocation(n_components=n_components)
+        tf_vec = tf_model.fit_transform(self.corpus) # 支持文件
+        lda = LatentDirichletAllocation(n_components=n_components)
         lda.fit(tf_vec)
         return lda, tf_model.get_feature_names()
 
