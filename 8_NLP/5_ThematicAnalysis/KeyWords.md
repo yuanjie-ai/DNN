@@ -2,16 +2,16 @@
 
 ---
 
-- TFIDF
+## 1. TFIDF
 
 ---
-- TextRank
+## 2. TextRank
 
 ---
-- Glove
+## [3. Glove][1]
 
 ---
-- Skip-Gram + Huffman Softmax
+## 4. Skip-Gram + Huffman Softmax
 ```python
 from pathlib import Path
 
@@ -51,3 +51,6 @@ class SGHS(object):
             self.model = gensim.models.Word2Vec.load(self.model)
 
 ```
+
+---
+[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/2_Glove/load_glove.md
