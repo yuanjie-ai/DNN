@@ -3,7 +3,7 @@ def file_processing(file_input, file_output='./tmp.txt', func=lambda x: x.lower(
     from tqdm import tqdm
     with open(file_input) as ifile:
         with open(file_output, 'a') as ofile: # append
-            for i in tqdm(ifile, desc='file_input'):
+            for i in tqdm(ifile, desc='File Processing'):
                 if i.strip():
                     ofile.writelines(func(i))
 ```
