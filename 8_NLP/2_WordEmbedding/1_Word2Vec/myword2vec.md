@@ -57,7 +57,7 @@ class MyWord2Vec(object):
             should be drawn (usually between 5-20).
             If set to 0, no negative sampling is used.
         """
-        model = Word2Vec(tqdm(self.corpus), size=vector_size, window=window, min_count=min_count, sg=sg, hs=hs,
+        model = Word2Vec(tqdm(self.corpus, desc="Word2Vec Preprocessing"), size=vector_size, window=window, min_count=min_count, sg=sg, hs=hs,
                          negative=negative, iter=epochs, workers=32)
         return model
 
