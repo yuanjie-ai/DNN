@@ -37,7 +37,7 @@ class MyWord2Vec(object):
 
     def word2vec(self,
                  vector_size=300,
-                 window=15,
+                 window=5,
                  min_count=1,
                  sg=0,
                  hs=0,
