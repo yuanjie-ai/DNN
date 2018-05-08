@@ -47,8 +47,8 @@ class MyWord2Vec(object):
         :param vector_size:  Dimensionality of the feature vectors.
         :param window: The maximum distance between the current and predicted word within a sentence.
         :param min_count: Ignores all words with total frequency lower than this.
-        :param is_cbow: int {1, 0}
-            Defines the training algorithm. If 1, CBOW is used, otherwise, skip-gram is employed.
+        :param sg: int {1, 0}
+            Defines the training algorithm. If 1, skip-gram is employed; otherwise, CBOW is used.
         :param hs: int {1,0} shared_softmax
             If 1, hierarchical softmax will be used for model training.
             If set to 0, and `negative` is non-zero, negative sampling will be used.
