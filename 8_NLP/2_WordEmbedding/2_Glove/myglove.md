@@ -64,5 +64,5 @@ class MyGlove(object):
     def reader(self, file_path):
         with open(file_path) as f:
             for i in f:
-                yield i.strip().split(' ')
+                yield i.strip().lower().split(' ')
 ```
