@@ -49,7 +49,7 @@ class Simpler_Golve:
         word_vec = self.normalized_embeddings_[self.word2id[word]]
         word_sim = np.dot(self.normalized_embeddings_, word_vec)
         word_sim_sort = word_sim.argsort()[::-1]
-        return [(self.id2word[i], word_sim[i]) for i in word_sim_sort[:topn]]
+        return [(self.id2word[i], word_sim[i]) for i in word_sim_sort[1:topn]]
     def analogy(self, pos_word_1, pos_word_2, neg_word=None, topn=20):
         if neg_word:
             word_vec = self.embeddings[self.word2id[pos_word_1]] + \
@@ -89,5 +89,6 @@ class Simpler_Golve:
         return np.dot(sent_vec_1,sent_vec_2)
     def __getitem__(self, w):
         return self.embeddings[self.word2id[w]]
+
 
 ```
