@@ -1,10 +1,11 @@
 ```python
-def file_processing(file_input, file_output='./tmp.txt', func=lambda x: x.strip()):
+def file_processing(file_input, file_output='./tmp.txt', func=lambda x: x.lower()):
     from tqdm import tqdm
     with open(file_input) as ifile:
-        for i in tqdm(ifile, desc='file_input'):
-            with open(file_output, 'a') as ofile: # append
-                ofile.writelines('%s\n' % func(i))
+        with open(file_output, 'a') as ofile: # append
+            for i in tqdm(ifile, desc='file_input'):
+                if i.strip():
+                    ofile.writelines(func(i))
 ```
 ---
 ```python
