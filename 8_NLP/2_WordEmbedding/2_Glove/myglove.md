@@ -1,12 +1,12 @@
 - C
 ```python
-def my_glove(CORPUS_PATH, GLOVE_HOME='/Users/yuanjie/GitHub/glove/build'):
+def my_glove(CORPUS_PATH, GLOVE_HOME='/DATA/glove/build'):
     import os
     from pathlib import Path
     _path = Path(CORPUS_PATH).parent
     _vocab = "%s/vocab.txt" % _path
     _cooccur = "%s/cooccur.bin" % _path
-    _shuf = "%s/cooccur.shuf.bin" %_path
+    _shuf = "%s/cooccurrence.shuf.bin" %_path
     _vectors = "%s/vectors" %_path
     
     cmd_vocab = "%s/vocab_count -min-count 128 < %s > %s" % (GLOVE_HOME, CORPUS_PATH, _vocab)
@@ -15,7 +15,7 @@ def my_glove(CORPUS_PATH, GLOVE_HOME='/Users/yuanjie/GitHub/glove/build'):
     cmd_glove = "%s/glove -vector-size 100 -threads 32 -alpha 0.75 -x-max 100.0 -eta 0.05 -binary 2 -save-file %s" % (GLOVE_HOME, _vectors)
     cmd = ' && '.join([cmd_vocab, cmd_cooccur, cmd_shuffle, cmd_glove])
     os.system(cmd)
-    print(os.popen('cd %s && ls -l' % _path).read()) # 词向量与数据同目录
+    print(os.popen('cd %s && ls -l' % _path).read()) # 同目录
 ```
 
 
