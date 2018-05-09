@@ -17,7 +17,7 @@ class MyNLP(object):
         if returnstr:
             s = ' '.join(_filter)
         else:
-            s = list(filter(_filter))
+            s = list(_filter)
         return s
 
     def get_key_words(self,
