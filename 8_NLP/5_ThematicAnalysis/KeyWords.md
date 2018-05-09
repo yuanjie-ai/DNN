@@ -1,17 +1,19 @@
 <h1 align = "center">:rocket: 关键词提取 :facepunch:</h1>
 
 ---
-
-## 1. TFIDF
-
----
-## 2. TextRank
+## 1. CV
 
 ---
-## [3. Glove][1]
+## 2. TFIDF
 
 ---
-## 4. Skip-Gram + Huffman Softmax
+## 3. TextRank
+
+---
+## [4. Glove][1]
+
+---
+## 5. Skip-Gram + Huffman Softmax
 ```python
 from pathlib import Path
 
