@@ -2,6 +2,7 @@
 from pathlib import Path
 
 from sklearn.feature_extraction import text
+from tqdm import tqdm
 
 
 class MyTfidf(object):
@@ -28,7 +29,7 @@ class MyTfidf(object):
         _ = text.__getattribute__(model)()
         if isinstance(self.corpus, str) and Path(self.corpus).is_file():
             with open(self.corpus) as f:
-                _.fit(f)
+                _.fit(tqdm(f, desc='Model Training'))
         else:
             _.fit(self.corpus)
         return _
