@@ -1,16 +1,16 @@
 <h1 align = "center">:rocket: 关键词提取 :facepunch:</h1>
 
 ---
-## 1. Tf
+[## 1. Tf][1]
 
 ---
-## 2. Tfidf
+[## 2. Tfidf][1]
 
 ---
 ## 3. TextRank
 
 ---
-## [4. Glove][1]
+## [4. Glove][3]
 
 ---
 ## 5. Skip-Gram + Huffman Softmax
@@ -55,4 +55,5 @@ class SGHS(object):
 ```
 
 ---
-[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/2_Glove/load_glove.md
+[1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/5_ThematicAnalysis/mytfidf.md
+[3]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/2_Glove/load_glove.md
