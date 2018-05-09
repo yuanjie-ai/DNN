@@ -1,10 +1,10 @@
 <h1 align = "center">:rocket: 关键词提取 :facepunch:</h1>
 
 ---
-## 1. CV
+## 1. Tf
 
 ---
-## 2. TFIDF
+## 2. Tfidf
 
 ---
 ## 3. TextRank
