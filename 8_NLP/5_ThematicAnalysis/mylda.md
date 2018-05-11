@@ -29,7 +29,7 @@ class MyLDA(object):
         return l
 ```
 
-- Gensim LDA
+- [Gensim LDA][2]
 ```python
 from pathlib import Path
 
@@ -145,3 +145,4 @@ class MyLDA(object):
 
 ---
 [1]: https://blog.csdn.net/tiffanyrabbit/article/details/76445909
+[2]: https://blog.csdn.net/sinat_26917383/article/details/79339727
