@@ -6,6 +6,8 @@
 - [Glove][4]
 
 ---
+https://github.com/vi3k6i5/flashtext
+
 [1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/1_Word2Vec/myword2vec.md
 [2]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/6_Doc2Vec/mydoc2vec.md
 [3]: https://github.com/Jie-Yuan/AI/edit/master/8_NLP/2_WordEmbedding/1_Word2Vec/model_update.md
