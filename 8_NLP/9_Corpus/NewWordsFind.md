@@ -1,4 +1,5 @@
 ```python
+# -*- coding: utf-8 -*-
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -9,7 +10,7 @@ from tqdm import tqdm
 
 class NewWordsFind(object):
     def __init__(self, corpus, n=4, min_count=128, min_proba={2: 5, 3: 25, 4: 125}):
-        self.n = n
+        self.n = n # 需要考虑的最长片段的字数（ngrams）
         self.min_count = min_count
         self.pattern_sub = re.compile('[^\u4e00-\u9fa5]+')  # 去除短文本
         self.pattern_split = re.compile('[^\u4e00-\u9fa5\w]+')  # 断句
@@ -75,13 +76,15 @@ class NewWordsFind(object):
     def __corpus_convert(self, corpus):
         if isinstance(corpus, str) and Path(corpus).is_file():
             with open(corpus) as f:
-                for doc in f:
+                for doc in tqdm(f, desc="Corpus Convert Processing"):
+                    assert isinstance(doc, str)
                     if len(self.pattern_sub.sub('', doc)) > 2:
                         for s in self.pattern_split.split(doc):
                             if s:
                                 yield s
         else:
-            for doc in corpus:
+            for doc in tqdm(corpus, desc="Corpus Convert Processing"):
+                assert isinstance(doc, str)
                 if len(self.pattern_sub.sub('', doc)) > 2:
                     for s in self.pattern_split.split(doc):
                         if s:
