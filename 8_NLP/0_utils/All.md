@@ -1,3 +1,17 @@
+```
+def full2half(s):
+    n = []
+    for char in s:
+        num = ord(char)
+        if num == 0x3000:
+            num = 32
+        elif 0xFF01 <= num <= 0xFF5E:
+            num -= 0xfee0
+        num = chr(num)
+        n.append(num)
+    return ''.join(n)
+```
+
 ```python
 def file_processing(file_input, file_output='./tmp.txt', func=lambda x: x.lower()):
     from tqdm import tqdm
