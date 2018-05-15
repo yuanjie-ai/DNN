@@ -1,5 +1,4 @@
 ```python
-# -*- coding: utf-8 -*-
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -7,25 +6,31 @@ from pathlib import Path
 import numpy as np
 from tqdm import tqdm
 
+import jieba
+
 
 class NewWordsFind(object):
-    def __init__(self, corpus, n=4, min_count=128, min_proba={2: 5, 3: 25, 4: 125}):
-        self.n = n # 需要考虑的最长片段的字数（ngrams）
+    def __init__(self, corpus, n=4, min_count=128, min_proba={2: 5, 3: 25, 4: 125}, with_jieba=False):
+        self.n = n  # 需要考虑的最长片段的字数（ngrams）
         self.min_count = min_count
         self.pattern_sub = re.compile('[^\u4e00-\u9fa5]+')  # 去除短文本
         self.pattern_split = re.compile('[^\u4e00-\u9fa5\w]+')  # 断句
         self.corpus = list(self.__corpus_convert(corpus))  # 爆内存？
         self.__ngrams()  # ngrams, total
         self.ngrams_ = set(i for i, j in self.ngrams.items() if self.__is_keep(i, min_proba))
+        self.with_jieba = with_jieba
 
     @property
     def words(self):
         words = defaultdict(int)
-        for s in tqdm(self.corpus, desc='Cut Processing'):
+        for s in tqdm(self.corpus, desc='           Cut Processing'):
             for i in self.__cut(s):
                 words[i] += 1
         words = {i: j for i, j in words.items() if j >= self.min_count}
-        return {i: j for i, j in words.items() if self.__is_real(i)}
+        if self.with_jieba:
+            return {i: j for i, j in words.items() if self.__is_real(i) and len(jieba.lcut(i)) != 1}
+        else:
+            return {i: j for i, j in words.items() if self.__is_real(i)}
 
     def __is_real(self, s):
         if len(s) >= 3:
@@ -63,7 +68,7 @@ class NewWordsFind(object):
 
     def __ngrams(self):
         ngrams = defaultdict(int)
-        for s in tqdm(self.corpus, desc='Ngrams Processing'):
+        for s in tqdm(self.corpus, desc='        Ngrams Processing'):
             l = len(s)
             for i in range(l):
                 for j in range(1, self.n + 1):
