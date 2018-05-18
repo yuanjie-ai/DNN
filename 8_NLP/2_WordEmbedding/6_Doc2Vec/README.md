@@ -3,7 +3,7 @@
 ---
 - [ModelUpdate][2]
 
-
+https://mp.weixin.qq.com/s/gV1Q8_aHMijdN4DqxcAHMw
 
 https://github.com/peter3125/sentence2vec/blob/master
 
