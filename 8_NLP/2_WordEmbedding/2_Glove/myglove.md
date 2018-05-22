@@ -1,21 +1,13 @@
 - C
-```python
-def my_glove(CORPUS_PATH, GLOVE_HOME='/DATA/glove/build'):
-    import os
-    from pathlib import Path
-    _path = Path(CORPUS_PATH).parent
-    _vocab = "%s/vocab.txt" % _path
-    _cooccur = "%s/cooccur.bin" % _path
-    _shuf = "%s/cooccurrence.shuf.bin" %_path
-    _vectors = "%s/vectors" %_path
-    
-    cmd_vocab = "%s/vocab_count -min-count 128 < %s > %s" % (GLOVE_HOME, CORPUS_PATH, _vocab)
-    cmd_cooccur = "%s/cooccur -window-size 15 -vocab-file %s -memory 16 < %s > %s" % (GLOVE_HOME, _vocab, CORPUS_PATH, _cooccur)
-    cmd_shuffle = "%s/shuffle -memory 16 < %s > %s" % (GLOVE_HOME, _cooccur, _shuf)
-    cmd_glove = "%s/glove -vector-size 100 -threads 32 -alpha 0.75 -x-max 100.0 -eta 0.05 -binary 2 -save-file %s" % (GLOVE_HOME, _vectors)
-    cmd = ' && '.join([cmd_vocab, cmd_cooccur, cmd_shuffle, cmd_glove])
-    os.system(cmd)
-    print(os.popen('cd %s && ls -lt' % _path).read()) # 同目录
+```sh
+echo "Glove Corpus Vectors"
+mkdir -p $3/temp && cd $3/temp
+
+
+$1/vocab_count -min-count 128 < $2 > vocab.txt
+$1/cooccur -window-size 15 -vocab-file vocab.txt -memory 16 < $2 > cooccur.bin
+$1/shuffle -memory 16 < cooccur.bin > cooccurrence.shuf.bin
+$1/glove -vector-size 100 -x-max 10 -iter 10 -alpha 0.75 -eta 0.05 -binary 2 -model 2 -save-file ../gloveVectors
 ```
 
 
