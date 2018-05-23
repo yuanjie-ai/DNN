@@ -24,6 +24,10 @@
   
   tokenizer.texts_to_matrix(texts, mode='binary') # mode: one of "binary", "count", "tfidf", "freq".
   tokenizer.texts_to_sequences(texts) # tokenizer.texts_to_sequences_generator(texts)
+  """
+  tokenizer.fit_on_sequences([text1])
+  tokenizer.sequences_to_matrix([[1, 2, 3]])
+  """
   ```
 
 ---
