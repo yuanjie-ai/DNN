@@ -31,4 +31,7 @@
   ```
 ---
 ### `import keras.preprocessing.sequence as S`
+- `S.pad_sequences`
+- `S.skipgrams`
+- `S.make_sampling_table`
 ---
