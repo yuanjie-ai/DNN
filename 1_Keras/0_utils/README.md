@@ -16,9 +16,11 @@
   texts=[text1,text2]
   tokenizer = T.Tokenizer(10**6)
   tokenizer.fit_on_texts(texts)
+  
+  tokenizer.word_counts
+  tokenizer.word_docs
+  tokenizer.word_index
+  tokenizer.index_docs
   ```
-  - tokenizer.word_counts
-  - tokenizer.word_docs
-  - tokenizer.word_index
-  - tokenizer.index_docs
+
 ---
