@@ -22,8 +22,8 @@
   tokenizer.word_index
   tokenizer.index_docs
   
-  tokenizer.texts_to_matrix(texts, mode='binary') # mode: one of "binary", "count", "tfidf", "freq".
-  (tokenizer.texts_to_sequences_generator(texts)
+  tokenizer.texts_to_matrix(texts, mode='binary') # mode: one of "binary", "count", "tfidf", "freq".
+  tokenizer.texts_to_sequences_generator(texts)
   ```
 
 ---
