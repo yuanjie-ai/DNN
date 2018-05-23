@@ -7,4 +7,6 @@
 'aabbcc'.translate(T.maketrans('abc', '123'))
 'cba'.translate(str.maketrans("abc", "123"))
 ```
+- `T.one_hot`
+- `T.text_to_word_sequence`
 ---
