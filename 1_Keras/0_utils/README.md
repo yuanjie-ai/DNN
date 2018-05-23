@@ -1,4 +1,4 @@
-<h1 align = "center">:rocket: KERAS API :facepunch:</h1>
+[<h1 align = "center">:rocket: KERAS API :facepunch:</h1>][0]
 
 ---
 ### `import keras.preprocessing.text as T`
@@ -34,4 +34,6 @@
 - `S.pad_sequences`
 - `S.skipgrams`
 - `S.make_sampling_table`
+
 ---
+[0]: https://blog.csdn.net/luanpeng825485697/article/details/79137208
