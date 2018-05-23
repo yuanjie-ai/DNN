@@ -29,5 +29,6 @@
   tokenizer.sequences_to_matrix([[1, 2, 3]])
   """
   ```
-
+---
+### `import keras.preprocessing.sequence as S`
 ---
