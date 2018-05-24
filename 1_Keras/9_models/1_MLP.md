@@ -9,7 +9,7 @@ from keras.utils.vis_utils import plot_model
 from keras.callbacks import ModelCheckpoint
 
 
-class KerasNN(object):
+class KerasMLP(object):
     def __init__(self, X, y, batch_size=32, nb_epoch=10, verbose=1, best_model_weight="best_model_weights.hdf5"):
         self.input_dim = X.shape[1]
         self.out_dim = y.shape[1]
