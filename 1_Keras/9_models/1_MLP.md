@@ -17,7 +17,10 @@ class KerasMLP(object):
         self.input_dim = X.shape[1]
         self.out_dim = y.shape[1]
         self.best_model_weight = best_model_weight
+
         print(f"Input Dim: {self.input_dim}")
+        print(f"Input Dim: {self.out_dim}\n")
+
         self.__build_keras_model()
         __callbacks = [self.checkpointer, self.lr_reducing, self.early_stopping]
         self.model.fit(X, y, batch_size, nb_epoch, verbose=1, callbacks=__callbacks, validation_split=0.2)
