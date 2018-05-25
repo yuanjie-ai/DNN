@@ -9,11 +9,11 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Flatten
 from keras.utils.vis_utils import plot_model
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, EarlyStopping, ReduceLROnPlateau
-from keras.optimizers import Adam
+from keras.optimizers import Adadelta
 
 
 class KerasCNN(object):
-    def __init__(self, X, y, optimizer=Adam(lr=0.01), batch_size=128, nb_epoch=10):
+    def __init__(self, X, y, optimizer=Adadelta, batch_size=128, nb_epoch=10):
         self.optimizer = optimizer
         self.input_shape = X.shape[1:]
         self.out_dim = y.shape[1]
