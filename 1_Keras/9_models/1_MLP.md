@@ -14,11 +14,11 @@ from keras.optimizers import Adam
 class KerasMLP(object):
     def __init__(self, X, y, optimizer=Adam(lr=0.01), batch_size=32, nb_epoch=10):
         self.optimizer = optimizer
-        self.input_dim = X.shape[1]
+        self.input_shape = X.shape[1]
         self.out_dim = y.shape[1]
         self.best_model_weight = best_model_weight
 
-        print(f"Input Dim: {self.input_dim}")
+        print(f"Input Dim: {self.input_shape}")
         print(f"Input Dim: {self.out_dim}\n")
 
         self.__build_keras_model()
@@ -27,7 +27,7 @@ class KerasMLP(object):
 
     def __build_keras_model(self):
         self.model = Sequential()
-        self.model.add(Dense(64, init="uniform", activation='relu', name="dense_1", input_dim=self.input_dim))
+        self.model.add(Dense(64, init="uniform", activation='relu', name="dense_1", input_shape=self.input_shape))
         self.model.add(Dropout(0.2))
         self.model.add(Dense(32, init="uniform", activation='relu', name="dense_2"))
         self.model.add(Dropout(0.2))
@@ -50,7 +50,7 @@ class KerasMLP(object):
     def lr_reducing(self):
         """Dynamic learning rate
         """
-        annealer = LearningRateScheduler(lambda x: 0.01 * 0.9 ** x, verbose=1)
+        annealer = LearningRateScheduler(lambda x: 0.01 * 0.9 ** x)
         # annealer = ReduceLROnPlateau(factor=0.1, patience=10, verbose=1) # lr = lr*0.9
         return annealer
 
