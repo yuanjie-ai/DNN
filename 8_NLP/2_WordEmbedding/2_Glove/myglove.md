@@ -6,7 +6,7 @@ mkdir -p $3/temp && cd $3/temp
 
 $1/vocab_count -min-count 128 < $2 > vocab.txt
 $1/cooccur -window-size 15 -vocab-file vocab.txt -memory 16 < $2 > cooccur.bin
-$1/shuffle -memory 16 < cooccur.bin > cooccurrence.shuf.bin
+$1/shuffle -memory 4 < cooccur.bin > cooccurrence.shuf.bin # 太大会报错
 $1/glove -vector-size 100 -x-max 10 -iter 10 -alpha 0.75 -eta 0.05 -binary 2 -model 2 -save-file ../gloveVectors
 ```
 
