@@ -51,7 +51,7 @@ class KerasMLP(object):
         """Dynamic learning rate
         """
         annealer = LearningRateScheduler(lambda x: 0.01 * 0.9 ** x, verbose=1)
-        # annealer = ReduceLROnPlateau(factor=0.1, patience=10, verbose=0) # lr = lr*0.9
+        # annealer = ReduceLROnPlateau(factor=0.1, patience=10, verbose=1) # lr = lr*0.9
         return annealer
 
     @property
