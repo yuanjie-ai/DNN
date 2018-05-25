@@ -16,7 +16,6 @@ class KerasMLP(object):
         self.optimizer = optimizer
         self.input_shape = X.shape[1:]
         self.out_dim = y.shape[1]
-        self.best_model_weight = best_model_weight
 
         print(f"Input Dim: {self.input_shape}")
         print(f"Input Dim: {self.out_dim}\n")
