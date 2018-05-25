@@ -13,5 +13,11 @@ from keras.regularizers import l2
 ```
 ---
 ## [Keras Model Save/Load][1]
+
+---
+## Predict
+```python
+model.predict_classes # np.argmax(model.preidct(X), axis=1)
+```
 ---
 [1]: https://blog.csdn.net/jiandanjinxin/article/details/77152530
