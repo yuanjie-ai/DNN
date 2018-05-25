@@ -37,8 +37,14 @@ class KerasMLP(object):
         self.model.compile(self.optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
         self.model.summary()
 
+    def get_class_name(self, res):
+        """
+        :param res: kk.model.preidct(X)
+        :return: 
+        """
+        return np.argmax(res, axis=1)
+
     def plot_model(self):
         plot_model(self.model, to_file='model.png')
-
-
+        
 ```
