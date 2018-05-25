@@ -18,7 +18,7 @@ class KerasMLP(object):
         self.out_dim = y.shape[1]
 
         print(f"Input Dim: {self.input_shape}")
-        print(f"Input Dim: {self.out_dim}\n")
+        print(f"Out Dim: {self.out_dim}    \n")
 
         self.__build_keras_model()
         __callbacks = [self.checkpointer, self.lr_reducing, self.early_stopping]
