@@ -62,6 +62,8 @@ class KerasCNN(object):
         return EarlyStopping(patience=2, verbose=1)
 
 #####################################################
+# get_file('mnist.npz', 'file:///algor/yuanjie/mnist.npz')
+# mnist.load_data()
 f = np.load('/algor/yuanjie/mnist.npz')
 X_train, y_train = f['x_train'], f['y_train']
 X_test, y_test = f['x_test'], f['y_test']
