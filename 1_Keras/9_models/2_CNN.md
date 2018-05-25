@@ -65,8 +65,8 @@ class KerasCNN(object):
 f = np.load('/algor/yuanjie/mnist.npz')
 X_train, y_train = f['x_train'], f['y_train']
 X_test, y_test = f['x_test'], f['y_test']
-X_train = X_train.reshape(X_train.shape[0], 28, 28, 1)
-X_test = X_test.reshape(X_test.shape[0], 28, 28, 1)
+X_train = X_train.reshape(-1, 28, 28, 1)/255
+X_test = X_test.reshape(-1, 28, 28, 1)/255
 # convert class vectors to binary class matrices
 y_train = keras.utils.to_categorical(y_train, 10)
 y_test = keras.utils.to_categorical(y_test, 10)
