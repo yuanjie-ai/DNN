@@ -40,7 +40,7 @@ class KerasMLP(object):
     def get_class_name(self, res):
         """
         :param res: kk.model.preidct(X)
-        :return: 
+        :return: model.predict_classes
         """
         return np.argmax(res, axis=1)
 
