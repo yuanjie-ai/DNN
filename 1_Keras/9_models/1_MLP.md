@@ -12,7 +12,7 @@ from keras.optimizers import Adam
 
 
 class KerasMLP(object):
-    def __init__(self, X, y, optimizer=Adam(lr=0.01), batch_size=32, nb_epoch=10, best_model_weight="best_model_weights.hdf5"):
+    def __init__(self, X, y, optimizer=Adam(lr=0.01), batch_size=32, nb_epoch=10):
         self.optimizer = optimizer
         self.input_dim = X.shape[1]
         self.out_dim = y.shape[1]
