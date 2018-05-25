@@ -67,7 +67,7 @@ x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
 # convert class vectors to binary class matrices
-y_train = keras.utils.to_categorical(y_train, num_classes)
-y_test = keras.utils.to_categorical(y_test, num_classes)
+y_train = keras.utils.to_categorical(y_train, 10)
+y_test = keras.utils.to_categorical(y_test, 10)
 ############################################################
 ```
