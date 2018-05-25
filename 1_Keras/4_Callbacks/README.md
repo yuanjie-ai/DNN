@@ -8,6 +8,7 @@ class KerasCallbacks(object):
 
     def lr_scheduler(self):
         annealer = LearningRateScheduler(lambda x: 0.01 * 0.9 ** x)  # Dynamic learning rate
+        # keras.callbacks.ReduceLROnPlateau
         return annealer
 
     def early_stopping(self):
