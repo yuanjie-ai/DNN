@@ -4,7 +4,7 @@ import numpy as np
 np.random.seed(1337)  # for reproducibility
 
 from keras.models import Sequential
-from keras.layers import Dense, Activation
+from keras.layers import Dense, Dropout, Activation
 from keras.utils.vis_utils import plot_model
 from keras.callbacks import ModelCheckpoint
 
@@ -22,14 +22,11 @@ class KerasMLP(object):
 
     def __build_keras_model(self):
         self.model = Sequential()
-        self.model.add(Dense(64, init="uniform", input_dim=self.input_dim, name="dense_1"))
-        self.model.add(Activation('relu'))
-        
-        self.model.add(Dense(32, init="uniform", name="dense_2"))
-        self.model.add(Activation('relu'))
-        
-        self.model.add(Dense(self.out_dim, name="dense_3"))
-        self.model.add(Activation('sigmoid'))
+        self.model.add(Dense(64, init="uniform", activation='relu', name="dense_1", input_dim=self.input_dim))
+        self.model.add(Dropout(0.2))
+        self.model.add(Dense(32, init="uniform", activation='relu', name="dense_2"))
+        self.model.add(Dropout(0.2))
+        self.model.add(Dense(self.out_dim, activation='sigmoid', name="dense_3"))
         
         # self.model.load_weights(self.best_model_weight, by_name=True)
         self.model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
