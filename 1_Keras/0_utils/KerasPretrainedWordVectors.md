@@ -9,13 +9,19 @@ from tqdm import tqdm
 
 class KerasPretrainedWordVectors(object):
     def __init__(self, X=None, y=None, word_vectors=None, max_num_words=10 ** 5):
-
+        """
+        :param X: ['Well done!', 'Good work']
+        :param y:
+        :param word_vectors: word vectors path
+        :param max_num_words:
+        """
         self.max_num_words = max_num_words
 
         if word_vectors is not None:
             self.__load_word_vectors(word_vectors)
 
         self.__preprocessing(texts=tqdm(X, desc="Text Preprocessing"))
+
         if y is not None:
             self.y = to_categorical(y)
 
@@ -38,6 +44,7 @@ class KerasPretrainedWordVectors(object):
                                     input_length=self.max_sequence_length,
                                     trainable=False)
         return embedding_layer
+
     def __preprocessing(self, texts):
         """
         :param texts: ['some thing to do']
@@ -61,4 +68,5 @@ class KerasPretrainedWordVectors(object):
                     embeddings_index[line[0]] = np.asarray(line[1:], dtype='float32')
         self.embeddings_index = embeddings_index
         self.embeddings_dim = len(line[1:])
+
 ```
