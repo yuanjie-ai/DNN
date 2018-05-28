@@ -8,10 +8,9 @@ from tqdm import tqdm
 
 
 class KerasPretrainedWordVectors(object):
-    def __init__(self, X=None, y=None, word_vectors=None, max_num_words=10 ** 5, max_sequence_length=10):
+    def __init__(self, X=None, y=None, word_vectors=None, max_num_words=10 ** 5):
 
         self.max_num_words = max_num_words
-        self.max_sequence_length = max_sequence_length
 
         if word_vectors is not None:
             self.__load_word_vectors(word_vectors)
@@ -47,10 +46,11 @@ class KerasPretrainedWordVectors(object):
         tokenizer = Tokenizer(self.max_num_words)
         tokenizer.fit_on_texts(texts)
         sequences = tokenizer.texts_to_sequences(texts)
+        self.max_sequence_length = max(map(len, sequences))
         self.tokenizer = tokenizer
         self.word_index = tokenizer.word_index
         print(f"Get Unique Words: {len(self.word_index)}")
-        self.X = pad_sequences(sequences, maxlen=self.max_sequence_length)
+        self.X = pad_sequences(sequences, maxlen=self.max_sequence_length, padding='post')
 
     def __load_word_vectors(self, word_vectors):
         embeddings_index = {}
