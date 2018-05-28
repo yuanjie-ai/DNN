@@ -16,16 +16,18 @@ class KerasPretrainedWordVectors(object):
         :param max_num_words:
         """
         self.max_num_words = max_num_words
-
+        
         if word_vectors is not None:
             self.__load_word_vectors(word_vectors)
 
         self.__preprocessing(texts=tqdm(X, desc="Text Preprocessing"))
-
+        
         if y is not None:
             num_classes = len(set(y))
             if num_classes > 2:
                 self.y = to_categorical(y, num_classes)
+            else:
+                self.y = y
 
     def embedding_layer(self):
         # prepare embedding matrix
