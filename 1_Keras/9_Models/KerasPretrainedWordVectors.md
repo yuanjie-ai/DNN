@@ -23,7 +23,9 @@ class KerasPretrainedWordVectors(object):
         self.__preprocessing(texts=tqdm(X, desc="Text Preprocessing"))
 
         if y is not None:
-            self.y = to_categorical(y)
+            num_classes = len(set(y))
+            if num_classes > 2:
+                self.y = to_categorical(y, num_classes)
 
     def embedding_layer(self):
         # prepare embedding matrix
