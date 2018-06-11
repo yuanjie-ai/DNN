@@ -1,3 +1,4 @@
+import numpy as np
 from tqdm import tqdm
 
 
@@ -27,6 +28,6 @@ class BOW(object):
     def __doc2num(self):
         doc2num = []
         for text in tqdm(self.X, desc='Doc To Number'):
-            doc2num.append(
-                [self.word2idx.get(i, 0) for i in text[:self.maxlen]] + [0] * (self.maxlen - len(text)))  # 未登录词全部用0表示
-        self.doc2num = doc2num
+            s = [self.word2idx.get(i, 0) for i in text[:self.maxlen]]
+            doc2num.append(s + [0]*(maxlen-len(s)))  # 未登录词全部用0表示
+        self.doc2num = np.asarray(doc2num)
