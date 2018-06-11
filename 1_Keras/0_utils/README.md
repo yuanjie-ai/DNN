@@ -7,7 +7,7 @@
 'aabbcc'.translate(T.maketrans('abc', '123'))
 'cba'.translate(str.maketrans("abc", "123"))
 ```
-- `T.one_hot`
+- `T.one_hot`: `one_hot('some thing to eat', 10) # [7, 9, 6, 4]`
 - `T.text_to_word_sequence`
 - `T.Tokenizer`
   ```python
