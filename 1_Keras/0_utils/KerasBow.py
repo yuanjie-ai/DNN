@@ -4,7 +4,7 @@ from keras.utils.np_utils import to_categorical
 from tqdm import tqdm
 
 
-class TextPreprocessing(object):
+class KerasBow(object):
     def __init__(self, X=None, y=None, maxlen=None, num_words=10 ** 5):
         self.maxlen = maxlen
         self.num_words = num_words
