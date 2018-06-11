@@ -25,8 +25,8 @@ class BOW(object):
         self.word2idx = {j: i for i, j in self.idx2word.items()}
 
     def __doc2num(self):
-        texts = []
+        doc2num = []
         for text in tqdm(self.X, desc='Doc To Number'):
-            texts.append(
+            doc2num.append(
                 [self.word2idx.get(i, 0) for i in text[:self.maxlen]] + [0] * (self.maxlen - len(text)))  # 未登录词全部用0表示
         self.doc2num = doc2num
