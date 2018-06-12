@@ -13,7 +13,7 @@ from keras.optimizers import Adadelta, Adam
 
 
 class KerasLSTM(object):
-    def __init__(self, X, y, max_feature=10000, optimizer=Adam(0.005), batch_size=128, nb_epoch=10):
+    def __init__(self, X, y, max_feature=10000, optimizer=Adam(0.01), batch_size=512, nb_epoch=5):
         self.max_feature = max_feature
         self.optimizer = optimizer
         self.input_shape = X.shape[1:]
@@ -27,6 +27,13 @@ class KerasLSTM(object):
         self.model.fit(X, y, batch_size, nb_epoch, verbose=1, callbacks=__callbacks, validation_split=0.25)
 
     def __build_keras_model(self):
+#         main_input  = Input(shape=(None,))
+#         x = Embedding(max_features, 128, mask_zero=True)(main_input)
+#         x = LSTM(128)(x) # lstm = LSTM(128, return_sequences=True, return_state=True)(input_vecs)
+#         x = Dropout(0.5)(x)
+#         main_output = Dense(1, activation='sigmoid')(x)
+#         model = Model(inputs=main_input, outputs=main_output)
+        
         self.model = Sequential()
         self.model.add(Embedding(self.max_feature, 128, mask_zero=True))
         self.model.add(LSTM(128))
@@ -50,12 +57,13 @@ class KerasLSTM(object):
     def lr_reducing(self):
         """Dynamic learning rate
         """
-        annealer = LearningRateScheduler(lambda x: 0.005 * 0.9 ** x)
+        annealer = LearningRateScheduler(lambda x: 0.01 * 0.9 ** x)
 #         annealer = ReduceLROnPlateau(factor=0.1, patience=3, verbose=1) # lr = lr*0.9
         return annealer
 
     @property
     def early_stopping(self):
         return EarlyStopping(patience=3, verbose=1)
+
 
 ```
