@@ -29,5 +29,5 @@ class BOW(object):
         doc2num = []
         for text in tqdm(self.X, desc='Doc To Number'):
             s = [self.word2idx.get(i, 0) for i in text[:self.maxlen]]
-            doc2num.append(s + [0]*(maxlen-len(s)))  # 未登录词全部用0表示
+            doc2num.append(s + [0]*(self.maxlen-len(s)))  # 未登录词全部用0表示
         self.doc2num = np.asarray(doc2num)
