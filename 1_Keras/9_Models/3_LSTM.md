@@ -13,7 +13,7 @@ from keras.optimizers import Adadelta, Adam
 
 
 class KerasLSTM(object):
-    def __init__(self, X, y, max_feature=10000, optimizer=Adadelta(2), batch_size=128, nb_epoch=10):
+    def __init__(self, X, y, max_feature=10000, optimizer=Adam(0.005), batch_size=128, nb_epoch=10):
         self.max_feature = max_feature
         self.optimizer = optimizer
         self.input_shape = X.shape[1:]
@@ -50,7 +50,7 @@ class KerasLSTM(object):
     def lr_reducing(self):
         """Dynamic learning rate
         """
-        annealer = LearningRateScheduler(lambda x: 1 * 0.9 ** x)
+        annealer = LearningRateScheduler(lambda x: 0.005 * 0.9 ** x)
 #         annealer = ReduceLROnPlateau(factor=0.1, patience=3, verbose=1) # lr = lr*0.9
         return annealer
 
