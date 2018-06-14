@@ -13,7 +13,7 @@ from keras.optimizers import Adadelta
 
 
 class KerasCNN(object):
-    def __init__(self, X, y, optimizer=Adadelta, batch_size=128, nb_epoch=10):
+    def __init__(self, X, y, optimizer=Adadelta(), batch_size=128, nb_epoch=10):
         self.optimizer = optimizer
         self.input_shape = X.shape[1:]
         self.out_dim = y.shape[1]
