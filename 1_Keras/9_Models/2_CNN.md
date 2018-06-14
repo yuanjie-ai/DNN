@@ -41,7 +41,7 @@ class KerasCNN(object):
         self.model.summary()
 
     def plot_model(self):
-        plot_model(self.model, to_file='model.png')
+        plot_model(self.model, to_file='model.png', show_shapes=True, show_layer_names=False)
 
     """class KerasCallbacks(object):"""
     @property
