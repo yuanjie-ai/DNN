@@ -8,6 +8,10 @@ Levenshtein.jaro(str1, str2) # Jaro Distance # 据说是用来判定健康记录
 Levenshtein.jaro_winkler(str1, str2) # 给予了起始部分就相同的字符串更高的分数
 ```
 
+> 去除停用词（主要是标点符号的影响）
+
+> 针对中文进行分析，按照词比较是不是要比按照字比较效果更好？
+
 https://blog.csdn.net/luo123n/article/details/9999481
 
 https://www.jb51.net/article/98449.htm
