@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 
 class KerasBow(object):
-    def __init__(self, train=None, test=None, maxlen=None, num_words=10 ** 5):
+    def __init__(self, train=None, test=None, maxlen=None, num_words=10 ** 3):
         self.maxlen = maxlen
         self.num_words = num_words
         self.__preprocessing(tqdm(train, desc="Text Preprocessing"), test)
@@ -19,14 +19,14 @@ class KerasBow(object):
         tokenizer.fit_on_texts(train)
         if test is None:
             test = train
-        sequences = tokenizer.texts_to_sequences(train)
+        sequences = tokenizer.texts_to_sequences(test)
         self.tokenizer = tokenizer
         self.word_index = tokenizer.word_index
         # self.word_counts = tokenizer.word_counts
-        print(f"Get Unique Words: {len(self.word_index)}")
-        self.X = pad_sequences(sequences, maxlen=self.maxlen, padding='post')
+        print(f"Get Unique Words In Train: {len(self.word_index)}")
+        self.data = pad_sequences(sequences, maxlen=self.maxlen, padding='post')
         if self.maxlen is None:
-            self.maxlen = self.X.shape[1]
+            self.maxlen = self.data.shape[1]
 
     def __label_mapper(self, labels):  # from collections import defaultdict
         # label2idx = defaultdict(int)
