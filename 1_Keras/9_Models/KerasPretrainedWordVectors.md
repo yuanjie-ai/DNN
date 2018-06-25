@@ -5,6 +5,11 @@ from keras.layers import Embedding
 
 class KerasEmbedding(object):
     def __init__(self, fname, maxlen, word_index):
+        """
+        :param fname: 词向量路径
+        :param maxlen: 句序列最大长度
+        :param word_index: KerasBow().tokenizer.word_index
+        """
         self.fname = fname
         self.maxlen = maxlen
         self.word_index = word_index
@@ -48,5 +53,6 @@ class KerasEmbedding(object):
                 if len(line) > 2:
                     embeddings_index[line[0]] = np.asarray(line[1:], dtype='float32')
         return embeddings_index, len(line[1:])
+
 
 ```
