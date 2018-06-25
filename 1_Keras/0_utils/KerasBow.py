@@ -10,7 +10,7 @@ class KerasBow(object):
     通过列表中的索引，我们可以统计出句子中某个单词出现的次数。
     """
 
-    def __init__(self, maxlen=None, num_words=20000):
+    def __init__(self, num_words=20000, maxlen=None):
         """
         :param maxlen: 句子序列最大长度
         :param num_words: top num_words-1(词频降序)：保留最常见的num_words-1词
