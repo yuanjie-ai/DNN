@@ -1,6 +1,5 @@
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
-from tqdm import tqdm
 
 
 class KerasBow(object):
@@ -22,14 +21,16 @@ class KerasBow(object):
         """
         :param corpus: ['some thing to do', 'some thing to drink']与sklearn提取文本特征一致
         """
+        print('Create Bag of Words ...')
         self.tokenizer = Tokenizer(self.num_words)
-        self.tokenizer.fit_on_texts(tqdm(docs, desc="Create Bag of Words"))
+        self.tokenizer.fit_on_texts(docs)
         print(f"Get Unique Words In Train: {len(self.tokenizer.word_index)}")
         # self.tokenizer.word_index
         # self.tokenizer.word_counts
 
     def transform(self, docs):
-        sequences = self.tokenizer.texts_to_sequences(tqdm(docs, desc="Docs To Sequences"))
+        print('Docs To Sequences ...')
+        sequences = self.tokenizer.texts_to_sequences(docs)
         pad_docs = pad_sequences(sequences, maxlen=self.maxlen, padding='post')
         if self.maxlen is None:
             self.maxlen = pad_docs.shape[1]
