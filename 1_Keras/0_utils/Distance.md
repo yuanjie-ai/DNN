@@ -14,9 +14,9 @@ def l2(x):
 ```python
 # @KerasEval()
 def keras_cos(a, b, scale=True):
-    dist = K.dot(a, K.transpose(b))/(l2(a)*l2(b))
+    dist = K.dot(a, K.transpose(b)) / (l2(a) * l2(b))
     if scale:
-        dist = 0.5*(K.sum(cos, axis=-1, keepdims=True) + 1)
+        dist = 0.5 * (K.sum(cos, axis=-1, keepdims=True) + 1)
     return dist
 ```
 
@@ -36,7 +36,7 @@ def manhattan(a, b, scale=True):
 def euclidean(a, b, scale=True):
     dist = l2(a - b)
     if scale:
-        dist = 1/(1 + dist)
+        dist = 1 / (1 + dist)
     return dist
 ```
 
