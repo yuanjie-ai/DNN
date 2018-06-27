@@ -14,7 +14,7 @@ def l2(x):
 ```python
 # @KerasEval()
 def keras_cos(a, b, scale=True):
-    dist = K.dot(a, K.transpose(b)) / (l2(a) * l2(b))
+    dist = K.dot(a, K.transpose(b)) / l2(a) / l2(b)
     if scale:
         dist = 0.5 * (K.sum(cos, axis=-1, keepdims=True) + 1)
     return dist
