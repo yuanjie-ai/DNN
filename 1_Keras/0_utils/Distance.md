@@ -18,6 +18,17 @@ def cosine(a, b, scale=True):
     if scale:
         dist = 0.5 * (dist + 1)
     return dist
+
+import numpy as np
+
+
+def np_cos(a, b, adjust=False):
+    cos = lambda a, b: np.dot(a, b) / np.linalg.norm(a) / np.linalg.norm(b)
+    if adjust:
+        m = np.array([a, b]).mean()
+        return cos(a - m, b - m)
+    return cos(a, b)
+
 ```
 
 ## 2. 曼哈顿距离
