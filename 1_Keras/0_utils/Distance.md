@@ -26,8 +26,8 @@ def keras_cos(a, b, scale=True):
 ## 3. 曼哈顿距离
 ```python
 # @KerasEval()
-def manhattan(left, right, scale=True):
-    dist = K.sum(K.abs(left - right), keepdims=True)
+def manhattan(a, b, scale=True):
+    dist = K.sum(K.abs(a - b), keepdims=True)
     if scale:
         dist = K.exp(-dist)
     return dist
