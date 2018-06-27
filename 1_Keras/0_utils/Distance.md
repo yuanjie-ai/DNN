@@ -1,4 +1,4 @@
-## 1. Keras范数
+## Keras范数
 ```python
 # @KerasEval()
 def l1(x):
