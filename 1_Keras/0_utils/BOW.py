@@ -5,7 +5,7 @@ from tqdm import tqdm
 class BOW(object):
     def __init__(self, X, min_count=10, maxlen=100):
         """
-        X: [[w1, w2],]]
+        X: [[w1, w2],]
         """
         self.X = X
         self.min_count = min_count
