@@ -1,5 +1,8 @@
 ## Keras范数
 ```python
+l1 = lambda x: K.sum(K.abs(x), axis=-1, keepdims=True)
+l2 = lambda x: K.sqrt(K.sum(K.square(x), axis=-1, keepdims=True))
+
 # @KerasEval()
 def l1(x):
     return K.sum(K.abs(x), axis=-1, keepdims=True)
@@ -47,7 +50,7 @@ def manhattan(a, b, scale=True):
 def euclidean(a, b, scale=True):
     dist = l2(a - b)
     if scale:
-        dist = 1 / (1 + dist)
+        dist = 1 / (1 + dist) # K.exp(-dist)
     return dist
 ```
 
