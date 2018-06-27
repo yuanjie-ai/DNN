@@ -13,10 +13,10 @@ def l2(x):
 ## 1. 余弦距离
 ```python
 # @KerasEval()
-def keras_cos(a, b, scale=True):
+def cosine(a, b, scale=True):
     dist = K.dot(a, K.transpose(b)) / l2(a) / l2(b)
     if scale:
-        dist = 0.5 * (K.sum(cos, axis=-1, keepdims=True) + 1)
+        dist = 0.5 * (dist + 1)
     return dist
 ```
 
