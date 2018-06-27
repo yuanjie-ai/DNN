@@ -9,20 +9,28 @@ def l2(x):
     return K.sqrt(K.sum(K.square(x), axis=-1, keepdims=True))
 ```
 
+---
 ## 1. 余弦距离
 ```python
 # @KerasEval()
-def keras_cos(a, b, scale=False):
-    cos = K.dot(a, K.transpose(b))/(l2(a)*l2(b))
+def keras_cos(a, b, scale=True):
+    dist = K.dot(a, K.transpose(b))/(l2(a)*l2(b))
     if scale:
-        cos = 0.5*(K.sum(cos, axis=-1, keepdims=True) + 1)
-    return cos
-    
-def np_cos(a, b, scale=False):
-    cos = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
+        dist = 0.5*(K.sum(cos, axis=-1, keepdims=True) + 1)
+    return dist
+```
+## 2. 欧式距离
+```python
+```
+
+## 3. 曼哈顿距离
+```python
+# @KerasEval()
+def manhattan(left, right, scale=True):
+    dist = K.sum(K.abs(left - right), keepdims=True)
     if scale:
-         cos = 0.5*(cos + 1)
-    return cos
+        dist = K.exp(-dist)
+    return dist
 ```
 
 ---
