@@ -11,15 +11,18 @@ def l2(x):
 
 ## 1. 余弦距离
 ```python
+# @KerasEval()
+def keras_cos(a, b, scale=False):
+    cos = K.dot(a, K.transpose(b))/(l2(a)*l2(b))
+    if scale:
+        cos = 0.5*(K.sum(cos, axis=-1, keepdims=True) + 1)
+    return cos
+    
 def np_cos(a, b, scale=False):
     cos = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
     if scale:
          cos = 0.5*(cos + 1)
     return cos
-    
-# @KerasEval()
-def keras_cos(a, b):
-    return K.dot(a, K.transpose(b))/(l2(a)*l2(b))
 ```
 
 ---
