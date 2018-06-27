@@ -20,17 +20,7 @@ def keras_cos(a, b, scale=True):
     return dist
 ```
 
-## 2. 欧式距离
-```python
-@KerasEval()
-def euclidean(a, b, scale=True):
-    dist = l2(a - b)
-    if scale:
-        dist = 1/(1 + dist)
-    return dist
-```
-
-## 3. 曼哈顿距离
+## 2. 曼哈顿距离
 ```python
 # @KerasEval()
 def manhattan(a, b, scale=True):
@@ -39,6 +29,18 @@ def manhattan(a, b, scale=True):
         dist = K.exp(-dist)
     return dist
 ```
+
+## 3. 欧式距离
+```python
+# @KerasEval()
+def euclidean(a, b, scale=True):
+    dist = l2(a - b)
+    if scale:
+        dist = 1/(1 + dist)
+    return dist
+```
+
+
 
 ---
 ```python
