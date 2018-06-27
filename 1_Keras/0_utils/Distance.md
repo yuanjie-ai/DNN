@@ -42,8 +42,13 @@ class KerasEval:
     def __call__(self, func):
         self.func = func
 
-        def realfunc(*args):
-            return K.eval(self.func(*map(K.variable, args)))
+        def realfunc(*args, **kwargs):
+            """
+            args: tensor
+            kwargs: not tensor
+            """
+            return K.eval(self.func(*map(K.variable, args), **kwargs))
 
         return realfunc
+
 ```
