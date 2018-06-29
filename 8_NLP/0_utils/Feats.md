@@ -54,6 +54,7 @@ http://qtanalyzer.codeplex.com/
 - [doc2num][3]: 针对tf/tfidf/wordVectors等计算
   - n-grams: 结合tf/tfidf使用
   - gensim
+    - bm25
     - wmd
     - norm_wmd(l2): norm_model.init_sims(replace=True)
   - skew/kurtosis: `from scipy.stats import skew, kurtosis`
