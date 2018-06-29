@@ -1,5 +1,10 @@
 ## 特征工程
 ---
+### DNN
+- LSTM/BILSTM + Topic
+
+
+---
 用leaning to rank做广告重点词
 
 
