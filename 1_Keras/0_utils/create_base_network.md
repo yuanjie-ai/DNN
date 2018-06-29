@@ -12,5 +12,6 @@ def create_base_network(input_shape):
     x = Dropout(0.1)(x)
     x = Dense(128, activation='relu')(x)
     return Model(input, x)
+    
 ```
 
