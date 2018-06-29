@@ -1,7 +1,7 @@
 ## 特征工程
 ---
 ### DNN
-- LSTM/BILSTM + Topic
+- LSTM/BILSTM + Topic: 主题顺序输入
 
 
 ---
