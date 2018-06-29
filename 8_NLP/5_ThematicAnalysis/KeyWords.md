@@ -53,7 +53,10 @@ class SGHS(object):
             self.model = gensim.models.Word2Vec.load(self.model)
 
 ```
+## 6. RAKE
+## 7. LDA/LSA/PLSA
 
 ---
 [1]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/5_ThematicAnalysis/mytfidf.md
 [3]: https://github.com/Jie-Yuan/AI/blob/master/8_NLP/2_WordEmbedding/2_Glove/load_glove.md
+[4]: https://github.com/aneesha/RAKE
