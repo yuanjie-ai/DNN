@@ -3,6 +3,14 @@
 ---
 - [ModelUpdate][2]
 
+## 无监督
+- Average Word2Vec
+- Auto Encoder
+- 语言模型: 语言模型描述的是某种语言中一段文本存在的概率
+- Skip-Thought 向量模型
+
+---
+
 https://mp.weixin.qq.com/s/gV1Q8_aHMijdN4DqxcAHMw
 
 https://github.com/peter3125/sentence2vec/blob/master
