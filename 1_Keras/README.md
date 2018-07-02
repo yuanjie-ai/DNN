@@ -1,7 +1,7 @@
 <h1 align = "center">:rocket: Keras :facepunch:</h1>
 
 ---
-## [Keras Model Save/Load][1]
+## [Model Save/Load][1]
 
 ---
 ## Predict
