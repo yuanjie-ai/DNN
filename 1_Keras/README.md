@@ -11,7 +11,9 @@ model.predict_classes # np.argmax(model.preidct(X), axis=1)
 
 ## [LSTM情感分析实验][2]
 
-## [封装]
+## [封装][3]
+
+
 ---
 [1]: https://blog.csdn.net/jiandanjinxin/article/details/77152530
 [2]: http://blog.csdn.net/xhyqlbd/article/details/79006899
