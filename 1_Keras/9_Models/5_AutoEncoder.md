@@ -1,5 +1,6 @@
 ```python
 inputImg = Input(shape=(784,))
+encodingDim = 32
 encodedIP = Dense(encodingDim, activation='relu')(inputImg)
 decodedIP = Dense(784, activation='sigmoid')(encodedIP)
 
@@ -10,7 +11,7 @@ encoder = Model(input=inputImg, output=encodedIP)
 autoencoder = Model(input=inputImg, output=decodedIP)
 
 # decoder
-encodedShaped = Input(shape=(32,))
+encodedShaped = Input(shape=(encodingDim,))
 decoder_layer = autoencoder.layers[-1]
 decoder = Model(input=encodedShaped, output=decoder_layer(encodedShaped))
 
