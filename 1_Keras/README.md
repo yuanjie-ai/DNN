@@ -1,10 +1,9 @@
 <h1 align = "center">:rocket: Keras :facepunch:</h1>
 
 ---
-## [Model Save/Load][1]
-
----
-## Predict
+## Model
+- [Save/Load][1]
+- Predict
 ```python
 model.predict_classes # np.argmax(model.preidct(X), axis=1)
 ```
