@@ -4,8 +4,10 @@
 
 
 ## 无监督
-- [Doc2Vec][1]: [model_update][2]
-- Average Word2Vec
+- Word2Vec
+  - [Doc2Vec][1]: [model_update][2]
+  - Average Word2Vec
+  
 - Auto Encoder
 - 语言模型: 语言模型描述的是某种语言中一段文本存在的概率
 - Skip-Thought 向量模型
