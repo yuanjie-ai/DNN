@@ -1,9 +1,10 @@
-[<h1 align = "center">:rocket: 描述性统计 :facepunch:</h1>][1]
+<h1 align = "center">:rocket: 描述性统计 :facepunch:</h1>
 
 ---
-- [ModelUpdate][2]
+
 
 ## 无监督
+- [Doc2Vec][1]: [model_update][2]
 - Average Word2Vec
 - Auto Encoder
 - 语言模型: 语言模型描述的是某种语言中一段文本存在的概率
