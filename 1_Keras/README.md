@@ -7,7 +7,11 @@
 ```python
 model.predict_classes # np.argmax(model.preidct(X), axis=1)
 ```
+## Layers
+- LSTM(units, dropout=0.0, recurrent_dropout=0.0, return_sequences=False, return_state=False, stateful=False)
+```
 
+```
 ## [LSTM情感分析实验][2]
 
 ## [封装][3]
