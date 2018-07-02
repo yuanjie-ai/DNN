@@ -1,6 +1,5 @@
-```python
-# 
-```
+<h1 align = "center">:rocket: Keras :facepunch:</h1>
+
 ---
 ## [Keras Model Save/Load][1]
 
