@@ -7,12 +7,17 @@
 - Word2Vec
   - [Doc2Vec][1]: [model_update][2]
   - Average Word2Vec
-  
 - Auto Encoder
 - 语言模型: 语言模型描述的是某种语言中一段文本存在的概率
-- Skip-Thought 向量模型
+- Skip-Thought
+  - 一个encoder: encoder部分的最后一个词的hidden state作为decoder的输入来生成词
+  - 两个decoder: 上一句和下一句
+  
 
 ---
+https://www.jiqizhixin.com/articles/042204
+
+http://rsarxiv.github.io/2016/05/28/Skip-Thought-Vectors-PaperWeekly/
 
 https://mp.weixin.qq.com/s/gV1Q8_aHMijdN4DqxcAHMw
 
