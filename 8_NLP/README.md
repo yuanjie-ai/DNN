@@ -3,6 +3,8 @@
 ---
 colibricore
 
+https://mp.weixin.qq.com/s/_cViS49o6iZgwgbxJqti0Q
+
 https://github.com/Jie-Yuan/finch
 
 https://github.com/crownpku/awesome-chinese-nlp
