@@ -1,5 +1,4 @@
-https://github.com/bojone/tf_word2vec
-两个小例子带你词嵌入层学习入门——Keras版
+https://blog.csdn.net/sinat_26917383/article/details/69666596
 
 https://yq.aliyun.com/articles/221681
 
