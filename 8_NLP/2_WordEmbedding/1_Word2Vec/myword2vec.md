@@ -13,6 +13,7 @@ class MyWord2Vec(object):
     负例采样准确率提高，速度会慢，不使用negative sampling的word2vec本身非常快，但是准确性并不高
     欠采样频繁词：可以提高结果的准确性和速度（适用范围1e-3到1e-5）
     文本（window）大小：skip-gram通常在10附近，CBOW通常在5附近
+    size: n = sqrt(词汇量)/2
     """
 
     def __init__(self, corpus=None):
