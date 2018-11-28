@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-echo "$0"
+echo "$0";
+echo "GLOVE: /home/yuanjie/glove/build";
+echo "语料: $1";
 
 BUILDDIR=/home/yuanjie/glove/build
-CORPUS=$1 # 语料目录
-VOCAB_FILE=$2 # 语料文件
+CORPUS=$1
 
+VOCAB_FILE=vocab.txt
 COOCCURRENCE_FILE=cooccurrence.bin
 COOCCURRENCE_SHUF_FILE=cooccurrence.shuf.bin
 SAVE_FILE=vectors
