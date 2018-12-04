@@ -20,6 +20,18 @@ pattern_chinese = re.compile('[\u4e00-\u9fa5]+')
 ```
 
 ### 2. 清洗
+```
+pattern = re.compile('[^a-z\u4e00-\u9fa5]+')
+pattern_en = re.compile('[a-zA-Z]+')
+with open('./title_words.txt', 'w') as ws, open('./title_chars.txt', 'w') as cs:
+    for line in tqdm_notebook(df.title, "Cut ..."):
+            if 4 <= len(line) <= 64:
+                _ = pattern.sub(' ', line)
+                _ = list(filter(lambda x: ' ' not in x, jieba.cut(_)))
+                ws.writelines(' '.join(_) + '\n')
+                cs.writelines(' '.join(sum([[w] if pattern_en.findall(w) else list(w) for w in _], []))+'\n')
+```
+
 ```python
 import re
 import jieba_fast as jieba
