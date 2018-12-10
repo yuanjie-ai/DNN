@@ -45,6 +45,8 @@ class KerasLSTM(object):
         self.model.summary()
 
     def plot_model(self):
+        from IPython import display
+        display.Image('./model.png')
         plot_model(self.model, to_file='model.png')
 
     """class KerasCallbacks(object):"""
