@@ -15,5 +15,7 @@ https://github.com/chenyuntc/pytorch-best-practice
 - torchembedding
 - https://blog.csdn.net/nlpuser/article/details/83627709
 
+- https://www.jianshu.com/p/e5adb235399e
+
 ---
 [1]: https://github.com/sksq96/pytorch-summary
