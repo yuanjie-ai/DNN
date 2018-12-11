@@ -17,5 +17,7 @@ https://github.com/chenyuntc/pytorch-best-practice
 
 - https://www.jianshu.com/p/e5adb235399e
 
+- http://www.nlpuser.com/nlp/2018/11/08/Vectorization-in-text/
+
 ---
 [1]: https://github.com/sksq96/pytorch-summary
